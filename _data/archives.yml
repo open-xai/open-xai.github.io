@@ -1,0 +1,589 @@
+- version: 2.2.0
+  date: 17 Aug 2020
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-2.2.0-windows-x64.zip
+  - Actlist-2.2.0-windows-x86.zip
+  - Actlist-2.2.0-macosx-x64.dmg
+  changes:
+  - bugfix
+    <ul>
+      <li>rollback&colon; plugin jar class loading mechanism</li>
+    </ul>
+
+- version: 2.1.0
+  date: 10 Aug 2020
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-2.1.0-windows-x64.zip
+  - Actlist-2.1.0-windows-x86.zip
+  - Actlist-2.1.0-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports height adjustment for graphic plugin</li>
+    </ul>
+  - improvements
+    <ul>
+      <li>logging experience</li>
+      <li>fix lazy reaction when clicks download button on explore view</li>
+      <li>plugin jar class loading mechanism</li>
+      <li>add markdown css to content area on ​the Plugin's About dialog</li>
+      <li>add minor inspection before downloading the plugin in the explore view</li>
+    </ul>
+  - dependency
+    <ul>
+      <li>remove log4j 1.7.5</li>
+      <li>add logback 1.2.3</li>
+    </ul>
+
+- version: 2.0.1
+  date: 19 Apr 2020
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-2.0.1-windows-x64.zip
+  - Actlist-2.0.1-windows-x86.zip
+  - Actlist-2.0.1-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports dynamic logging level configuration</li>
+      <li>supports log file under `/log` directory</li>
+    </ul>
+  - improvements
+    <ul>
+      <li>retry with proxy and non-proxy request</li>
+      <li>url fetching logic to prevent non-proxy redirect request failure</li>
+      <li>pretty JSON serialization</li>
+    </ul>
+  - dependency
+    <ul>
+      <li>update commons-codec to 1.11 from 1.6</li>
+      <li>update commons-logging to 1.2 from 1.1.3</li>
+      <li>update httpclient to 4.5.12 from 4.3.6</li>
+      <li>update jackson to 2.10.3 from 2.4.2</li>
+    </ul>
+
+- version: 1.7.1
+  date: 19 Feb 2020
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.7.1-windows-x64.zip
+  - Actlist-1.7.1-windows-x86.zip
+  - Actlist-1.7.1-macosx-x64.dmg
+  changes:
+  - critical JSON serialization patch
+
+- version: 1.7.0
+  date: 02 Feb 2020
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.7.0-windows-x64.zip
+  - Actlist-1.7.0-windows-x86.zip
+  - Actlist-1.7.0-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports markdown text on plugin’s About dialog</li>
+      <li>supports `analyze` method for checking the minimum compatible version</li>
+      <li>supports `ToggleFunction` on context menu</li>
+      <li>supports `getFunction` method for getting context menu's graphic object</li>
+    </ul>
+  - improvements
+    <ul>
+      <li>user interaction when failed to plugin’s automatic update</li>
+      <li>minor css style adjustments</li>
+    </ul>
+  - dependency
+    <ul>
+      <li>new dependency - javassist 3.26.0-GA</li>
+      <li>new dependency - commonmark 0.13.1</li>
+    </ul>
+
+- version: 1.6.0
+  date: 02 Sep 2019
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.6.0-windows-x64.zip
+  - Actlist-1.6.0-windows-x86.zip
+  - Actlist-1.6.0-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports dark mode UI</li>
+      <li>supports statistics through `setPluginStatisticsUUID()`</li>
+      <li>supports `Clear` context menu on console view</li>
+    </ul>
+  - bugfix
+    <ul>
+      <li>launch fails with non-ISO-8859-1 path on Windows</li>
+      <li>file encoding as a UTF-8 on Windows</li>
+      <li>detect wrong filename from download url</li>
+      <li>certain jar DnD with NPE</li>
+      <li>transparent background bug through `showLoadingBar()`</li>
+    </ul>
+  - changes
+    <ul>
+      <li>`debug(...)` method parameter as a builder pattern</li>
+      <li>some of the `debug(...)` method has been deprecated</li>
+      <li>minor UI changes</li>
+    </ul>
+  - breaking changes (access modifier)
+    <ul>
+      <li>`setSupportedPlatforms()`</li>
+      <li>`setOneTimePlugin()`</li>
+      <li>`setPluginArchivesURI()`</li>
+      <li>`setBeforeRequest()`</li>
+      <li>`setPluginUpdateCheckURI()`</li>
+    </ul>
+  - dependency
+    <ul>
+      <li>update JFoenix dependency to 8.0.8 from 1.0.0</li>
+    </ul>
+
+- version: 1.5.2
+  date: 07 Jul 2019
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.5.2-windows-x64.zip
+  - Actlist-1.5.2-windows-x64.exe
+  - Actlist-1.5.2-windows-x86.zip
+  - Actlist-1.5.2-windows-x86.exe
+  - Actlist-1.5.2-macosx-x64.dmg
+  changes:
+  - improvements
+    <ul>
+      <li>minor speed improvements</li>
+    </ul>
+  - bugfix
+    <ul>
+      <li>wrong plugin config file interactions</li>
+    </ul>
+
+- version: 1.5.1
+  date: 23 Jun 2019
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.5.1-windows-x64.zip
+  - Actlist-1.5.1-windows-x64.exe
+  - Actlist-1.5.1-windows-x86.zip
+  - Actlist-1.5.1-windows-x86.exe
+  - Actlist-1.5.1-macosx-x64.dmg
+  changes:
+  - improvements
+    <ul>
+      <li>supports direct install from explore view</li>
+      <li>`debug(isDebugMode)` and `debug(proxy)` method has been added</li>
+      <li>supports `ActlistPlugin.isDebugMode()` method for public static access</li>
+      <li>supports `requiredActlist` parameter from plugin's update check response for restrict automatic updates</li>
+    </ul>
+
+- version: 1.5.0
+  date: 01 Apr 2019
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.5.0-windows-x64.zip
+  - Actlist-1.5.0-windows-x64.exe
+  - Actlist-1.5.0-windows-x86.zip
+  - Actlist-1.5.0-windows-x86.exe
+  - Actlist-1.5.0-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports automatic plugin updates</li>
+      <li>`Check for updates` context menu</li>
+      <li>`Delete` context menu</li>
+    </ul>
+  - improvements
+    <ul>
+      <li>multiple jar DnD experience</li>
+      <li>native drag experience on Mac theme</li>
+    </ul>
+  - breaking changes
+    <ul>
+      <li>pluginArchivesURI will respect server's update check response</li>
+    </ul>
+
+- version: 1.4.3
+  date: 28 Jan 2019
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.4.3-windows-x64.zip
+  - Actlist-1.4.3-windows-x64.exe
+  - Actlist-1.4.3-windows-x86.zip
+  - Actlist-1.4.3-windows-x86.exe
+  - Actlist-1.4.3-macosx-x64.dmg
+  changes:
+  - critical dependency patch
+
+- version: 1.4.2
+  date: 27 Jan 2019
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.4.2-windows-x64.zip
+  - Actlist-1.4.2-windows-x64.exe
+  - Actlist-1.4.2-windows-x86.zip
+  - Actlist-1.4.2-windows-x86.exe
+  - Actlist-1.4.2-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports mainClass property on plugin's MANIFEST.MF</li>
+    </ul>
+  - improvements
+    <ul>
+      <li>fully supported debugging experience</li>
+      <li>UTF-8 console logging</li>
+    </ul>
+  - changes
+    <ul>
+      <li>Win theme UI/UX</li>
+      <li>default stage/root size</li>
+    </ul>
+  - bugfix
+    <ul>
+      <li>event bubbling on context menu</li>
+    </ul>
+
+- version: 1.4.1
+  date: 16 Dec 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.4.1-windows-x64.zip
+  - Actlist-1.4.1-windows-x64.exe
+  - Actlist-1.4.1-windows-x86.zip
+  - Actlist-1.4.1-windows-x86.exe
+  - Actlist-1.4.1-macosx-x64.dmg
+  changes:
+  - minor bugfix
+
+- version: 1.4.0
+  date: 14 Dec 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.4.0-windows-x64.zip
+  - Actlist-1.4.0-windows-x64.exe
+  - Actlist-1.4.0-windows-x86.zip
+  - Actlist-1.4.0-windows-x86.exe
+  - Actlist-1.4.0-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>brand new UI</li>
+      <li>supports platform theme</li>
+      <li>new plugin explore menu</li>
+    </ul>
+  - changes
+    <ul>
+      <li>java version will be displayed on About view</li>
+      <li>update/warning label will be disappeared after interactions</li>
+      <li>minor changes on first meet prompt label</li>
+    </ul>
+  - fixed bugs
+    <ul>
+      <li>http/https proxy host issue</li>
+      <li>scroll bar broken issue on WebView</li>
+      <li>tray notification dismiss issue</li>
+    </ul>
+
+- version: 1.3.0
+  date: 14 Oct 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.3.0-windows-x64.zip
+  - Actlist-1.3.0-windows-x64.exe
+  - Actlist-1.3.0-windows-x86.zip
+  - Actlist-1.3.0-windows-x86.exe
+  - Actlist-1.3.0-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports platform restriction function in plugin</li>
+      <li>supports feedback tray menu</li>
+    </ul>
+  - improvements
+    <ul>
+      <li>interaction on engine initialization</li>
+      <li>installation path can be selected on Windows exe installer</li>
+      <li>desktop icon can be created on Windows exe installer</li>
+      <li>caller plugin name will be shown in the tray notification</li>
+    </ul>
+  - fixed bugs
+    <ul>
+      <li>RESTfulAPI initialization</li>
+      <li>unicode installation path</li>
+      <li>mouse event consumming issue</li>
+      <li>wrong UI interactions on all platforms</li>
+    </ul>
+
+- version: 1.2.10
+  date: 26 Sep 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.10-windows-x64.zip
+  - Actlist-1.2.10-windows-x64.exe
+  - Actlist-1.2.10-windows-x86.zip
+  - Actlist-1.2.10-windows-x86.exe
+  - Actlist-1.2.10-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>supports one-time plugin which deactivates immediately after activated</li>
+      <li>supports plugin's update check through .js file</li>
+      <li>Actlist showing/hiding feature</li>
+    </ul>
+  - minor bugfix
+
+- version: 1.2.9
+  date: 06 Sep 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.9-windows-x64.zip
+  - Actlist-1.2.9-windows-x64.exe
+  - Actlist-1.2.9-windows-x86.zip
+  - Actlist-1.2.9-windows-x86.exe
+  - Actlist-1.2.9-macosx-x64.dmg
+  changes:
+  - new features
+    <ul>
+      <li>plugin's kill switch</li>
+      <li>plugin's end of service</li>
+    </ul>
+  - minor bugfix
+
+- version: 1.2.8
+  date: 30 Aug 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.8-windows-x64.zip
+  - Actlist-1.2.8-windows-x64.exe
+  - Actlist-1.2.8-windows-x86.zip
+  - Actlist-1.2.8-windows-x86.exe
+  - Actlist-1.2.8-macosx-x64.dmg
+  changes:
+  - update check request will be executed every 24 hours.
+  - minor UX improvements
+    <ul>
+      <li>orange dot and red dot will have animation</li>
+      <li>the tabs on plugin's about dialog are displayed dynamically.</li>
+    </ul>
+  - minor bugfix
+    <ul>
+      <li>getConfig() / putConfig() on debug mode</li>
+    </ul>
+
+- version: 1.2.7
+  date: 02 May 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.7-windows-x64.zip
+  - Actlist-1.2.7-windows-x64.exe
+  - Actlist-1.2.7-windows-x86.zip
+  - Actlist-1.2.7-windows-x86.exe
+  - Actlist-1.2.7-macosx-x64.dmg
+  changes:
+  - supports UTF-8 content on plugin's about dialog
+  - plugin can be added through drag and drop
+    <ul>
+      <li>also stage right click -> 'Add a new plugin' too</li>
+    </ul>
+  - minor UI changes
+  - minor UX improvements
+  - minor bugfix
+    <ul>
+      <li>context menu</li>
+    </ul>
+
+- version: 1.2.6
+  date: 19 Apr 2018
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.6-windows-x64.zip
+  - Actlist-1.2.6-windows-x64.exe
+  - Actlist-1.2.6-windows-x86.zip
+  - Actlist-1.2.6-windows-x86.exe
+  - Actlist-1.2.6-macosx-x64.dmg
+  changes:
+  - finally, debug(); method can be used in the Plugin's main method
+  - supports MessageBox owner
+  - supports proxy setting (None / Automatic / Manual)
+  - supports Plugin's update check
+  - supports warning text on Plugin
+  - minor UI changes on About dialog
+  - minor bugfix
+    <ul>
+      <li>hotkey on Mac</li>
+      <li>stage resize</li>
+    </ul>
+
+- version: 1.2.5
+  date: 11 Jul 2017
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.5-windows-x64.zip
+  - Actlist-1.2.5-windows-x64.exe
+  - Actlist-1.2.5-windows-x86.zip
+  - Actlist-1.2.5-windows-x86.exe
+  - Actlist-1.2.5-macosx-x64.dmg
+  changes:
+  - JVM tuning options has been modified.
+
+- version: 1.2.4
+  date: 11 Jul 2017
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.4-windows-x64.zip
+  - Actlist-1.2.4-windows-x64.exe
+  - Actlist-1.2.4-windows-x86.zip
+  - Actlist-1.2.4-windows-x86.exe
+  - Actlist-1.2.4-macosx-x64.dmg
+  changes:
+  - supports Actlist latest update alarm.
+  - minor feature has been added. (minimum compatible version / tray notification / G1GC option)
+
+- version: 1.2.3
+  date: 29 May 2017
+  supports:
+  - windows
+  - macosx
+  files:
+  - Actlist-1.2.3-windows-x64.zip
+  - Actlist-1.2.3-windows-x64.exe
+  - Actlist-1.2.3-windows-x86.zip
+  - Actlist-1.2.3-windows-x86.exe
+  - Actlist-1.2.3-macosx-x64.dmg
+  changes:
+  - supports Mac OS X.
+  - supports console viewer for logging.
+  - application executing speed has been improved.
+  - the menu has been added for open the plugins directory.
+
+- version: 1.2.2
+  date: 01 Feb 2017
+  supports:
+  - windows
+  files:
+  - Actlist-1.2.2-windows-x64.zip
+  - Actlist-1.2.2-windows-x64.exe
+  - Actlist-1.2.2-windows-x86.zip
+  - Actlist-1.2.2-windows-x86.exe
+  changes:
+  - minor feature has been improved. (function priority)
+  - minor feature has been modified.
+    <ul>
+      <li>applicationActivated() / applicationDeactivated() method will called even if the application is minimized.</li>
+    </ul>
+  - minor feature has been added. (applicationCloseRequested method)
+    <ul>
+      <li>each plugins can defining an action that called when the application is receives a close request.</li>
+    <ul>
+
+- version: 1.2.1
+  date: 09 Jan 2017
+  supports:
+  - windows
+  files:
+  - Actlist-1.2.1-windows-x64.zip
+  - Actlist-1.2.1-windows-x64.exe
+  - Actlist-1.2.1-windows-x86.zip
+  - Actlist-1.2.1-windows-x86.exe
+  changes:
+  - exception throwing feature.
+  - minor design changes.
+  - minor bug has been fixed.
+
+- version: 1.2.0
+  date: 05 Jan 2017
+  supports:
+  - windows
+  files:
+  - Actlist-1.2.0-windows-x64.zip
+  - Actlist-1.2.0-windows-x64.exe
+  - Actlist-1.2.0-windows-x86.zip
+  - Actlist-1.2.0-windows-x86.exe
+  changes:
+  - configure plugin's priority via drag and drop.
+  - save plugin's priority.
+  - supports About menu to each plugin.
+  - scroll bar design.
+  - ESC key to hide the Actlist.
+  - save application window size.
+  - windows key can be configured by hotkey.
+  - minor feature has been improved.
+  - minor bug has been fixed.
+
+- version: 1.1.0
+  date: 19 Dec 2016
+  supports:
+  - windows
+  files:
+  - Actlist-1.1.0-windows-x64.zip
+  - Actlist-1.1.0-windows-x64.exe
+  - Actlist-1.1.0-windows-x86.zip
+  - Actlist-1.1.0-windows-x86.exe
+  changes:
+  - load plugins by parallel and speed has been improved.
+  - supports Configuration dialog.
+  - hotkey change feature.
+  - opacity change feature.
+  - always on top feature.
+  - enable/disable to animation effect.
+  - fixed bug
+    <ul>
+      <li>terminate Actlist when some plugin raised exception.</li>
+      <li>not showing up when after first minimize to Actlist.</li>
+      <li>application single instance.</li>
+      <li>change application window size.</li>
+    </ul>
+
+- version: 1.0.0
+  date: 14 Dec 2016
+  supports:
+  - windows
+  files:
+  - Actlist-1.0.0-windows-x64.exe
+  - Actlist-1.0.0-windows-x86.exe
+  changes:
+  - The first proper release

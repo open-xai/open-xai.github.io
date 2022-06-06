@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BALSA</title>
+    <meta name="description" content="BALSA | BALSA is an open-source library for benchmarking explanations for structure data">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- <link rel="shortcut icon" href="/favicon.ico?1"> -->
+
+    <meta property="og:image" content="http://actlist.io/img/og-img-1200x630.png" />
+    <meta property="og:image:secure_url" content="https://actlist.io/img/og-img-1200x630.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>BALSA | BALSA | BALSA is an open-source library for benchmarking explanations for structure data</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="BALSA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="BALSA | BALSA is an open-source library for benchmarking explanations for structure data" />
+<meta property="og:description" content="BALSA | BALSA is an open-source library for benchmarking explanations for structure data" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="BALSA" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BALSA" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"BALSA","name":"BALSA","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="alternate" type="application/rss+xml" title="BALSA" href="http://localhost:4000/feed.xml" />
+
+    
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+            <!--<span><img src="/img/logonav.png"></span>-->
+            BALSA
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+                <li ><a href="/quick-start/">Getting Started</a></li>
+                <li ><a href="/plugins/">Explore</a></li>
+                <li ><a href="/archives/">Leaderboard</a></li>
+                <li ><a href="/archives/">Paper</a></li>    
+                <li><a href="mailto:chiragagarwall12@gmail.com">Contact</a></li>
+            </ul>
+            <div class="navbar-right">
+                <!--<form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+        </form>-->
+                <!-- <ul class="nav navbar-nav">
+                    <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="header-container jumbotron">
+    <div class="container">
+        <h1>BALSA</h1>
+        <p></p>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+    <h1 id="introduction">Introduction</h1>
+
+<p class="is-size-5"> 
+As machine learning models are increasingly being deployed in high-stakes settings such as finance and law, it becomes important to ensure that individuals who are adversely affected by these model predictions are provided with a corresponding explanation. To this end, several algorithms have been proposed in eXplainable Artificial Intelligence (XAI) literature to generate explanations for affected individuals. However, the lack of high-quality benchmarks impedes the advancement of XAI. Here, <b>BALSA supports the development of novel explanation methods and evaluation metrics, with a strong bent towards developing a public leaderboard to support systemantic benchmarking of explanation methods.</b>  
+</p>
+
+<p class="is-size-5">
+BALSA is the first benchmark resource that unifies all four categories of evaluation metrics, namely disagreement, faithfulness, stability, and disparity metrics, in current XAI literature. It contains most widely used XAI-ready structured datasets, explanation methods, benchmarks and leadearboards, and extensive Python programming functionality. 
+</p>
+
+<p class="is-size-5">
+Datasets, trained models, explanation methods, and evaluation metrics in BALSA are XAI-ready, where preprocessed input features and pre-trained models for readily available, such that researchers and practitioners can use them directly for benchmarking explantion methods. The functionalities of BALSA are designed to easily integrate into the XAI workflow. Finally, we develop an open-source software library that allows for efficient benchmarking of the quality of explanations with respect to several key properties.
+</p>
+
+<div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-12 is-size-5">
+                    <div class="box has-background-info has-text-white">
+                        <b>Building trustworthy Explanation Methods for XAI</b><br />
+                        We envision BALSA to be the center between XAI researchers and practitioners. Researchers can propose, integrate, and benchmark new explanation methods into BALSA and ML practitioners can integrate new evaluation metrics and obtain the leaderboard performance to use relevant explanation methods in their applications.
+                    </div>
+                </div>
+            </div>
+</div>
+
+<p><img src="/img/tdc_vision.png" alt="Vision for TDC" class="img-responsive" /></p>
+
+<div class="column is-12">
+    <hr />
+</div>
+
+<!-- <h2 id="tiered-design-of-therapeutics-data-commons-problem--learning-task--data-set">Tiered Design of Therapeutics Data Commons: “Problem – Learning Task – Data Set”</h2>
+
+<div class="container">
+    <div class="columns is-vcentered">
+        <div class="column is-8">
+              <p class="is-size-5">
+              TDC has an unique three-tiered hierarchical structure, which to our knowledge, is the first attempt at systematically organizing ML for therapeutics. We organize TDC into three distinct <b>problems</b>. For each problem, we give a collection <b>learning tasks</b>. Finally, for each task, we provide a series of <b>datasets</b>.
+              </p> 
+              <p class="is-size-5">
+              In the first tier, after observing a large set of therapeutics tasks, we categorize and abstract out three major problems:
+              </p>
+              <ul>
+                <li><strong>Single-instance prediction </strong> <code>single_pred</code>: Prediction of property for an individual biomedical entity. </li>
+                <li><strong>Multi-instance prediction </strong><code>multi_pred</code>: Prediction of property for multiple biomedical entities. </li>
+                <li><strong>Generation</strong> <code>generation</code>: Generation of a new desirable biomedical entity. </li>
+              </ul>
+        </div>
+        <div class="column is-3 has-text-centered">
+            <img src="/img/tdc_hierarchy.png" alt="TDC hierarchy" class="img-responsive" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="columns is-vcentered">
+        <div class="column is-8">
+              <p class="is-size-5">
+              The second tier in the TDC structure is organized into learning tasks. Improvement on these tasks can result in numerous applications, including identifying personalized combinatorial therapies, designing novel class of antibodies, improving disease diagnosis, and finding new cures for emerging diseases.
+        </p>
+        <p class="is-size-5">
+        In the third tier of TDC, we provide multiple datasets for each task. For each dataset, we provide several splits of the dataset into training, validation, and test sets to evaluate model performance.
+        </p>
+              <p class="is-size-5"> </p>
+        </div>
+        <div class="column is-3 has-text-centered">
+            <img src="/img/tdc_problems.png" alt="TDC problems" class="img-responsive" />
+        </div>
+    </div>
+</div> -->
+
+<div class="column is-12">
+    <hr />
+</div>
+
+<h2 id="installation">Installation</h2>
+
+<p class="is-size-5"> To install the BALSA package, open the terminal and type: </p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>balsa
+</code></pre></div></div>
+
+<p class="is-size-5"> The installation of the BALSA package is hassle-free with minimum dependency on external packages. </p>
+
+<div class="column is-12">
+    <hr />
+</div>
+
+<h2 id="data-loaders">Data Loaders</h2>
+
+<p class="is-size-5"> The data loaders in BALSA are lightweight. BALSA provides a collection of functionalities with easy-toa-use high-level APIs to benchmark explanations. As an example, to obtain the <code>SynthGauss</code> dataset from the data loader in BALSA, do as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">tdc.single_pred</span> <span class="kn">import</span> <span class="n">ADME</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">ADME</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">'Caco2_Wang'</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="n">splits</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_split</span><span class="p">()</span>
+</code></pre></div></div>
+<p class="is-size-5"> The variable <code>df</code> is a Pandas object holding the entire dataset. By default, the variable <code>splits</code> is a dictionary with keys <code>train</code>, <code>val</code>, and <code>test</code> whose values are all Pandas DataFrames with Drug IDs, SMILES strings and labels. For detailed information about outputs, see <a href="/single_pred_tasks/adme/#caco-2-cell-effective-permeability-wang-et-al">Datasets documentation.</a> </p>
+
+<div class="column is-12">
+    <hr />
+</div>
+
+<h2 id="ecosystem-of-data-functions-tools-libraries-and-community-resources">Ecosystem of Datasets, Explainers, Tools, Evaluation Metrics, and Community Resources</h2>
+
+<p class="is-size-5"> BALSA includes numerous data functions that can be readily used with
+any explanation method. BALSA divides its programmatic ecosystem into four broad categories: </p>
+<ul class="is-size-5">
+    <li><strong>Dataloader and Processing</strong>: TDC implements a series of metrics and performance functions to debug ML models, evaluate model performance for any task in TDC, and assess whether model predictions generalize to out-of-distribution datasets.</li>
+    <li><strong>Explanation</strong>: Therapeutic applications require ML models to generalize to out-of-distribution samples. TDC
+implements various data splits to reflect realistic learning settings. </li>
+    <li><strong>Evaluation</strong>: As therapeutics ML covers a wide range of data modalities and requires numerous repetitive
+processing functions, TDC implements wrappers and useful data helpers for them. </li>
+    <li><strong>Molecule Generation Oracles</strong>: Molecular design tasks require oracle functions to measure the quality of generated entities. TDC implements over 17 molecule generation oracles, representing the most comprehensive colleciton of molecule oracles. Each oracle is tailored to measure the quality of AI-generated molecules in a specific dimension.</li>
+  </ul>
+
+<p class="is-size-5"> For further information see <a href="/fct_overview/">Data Functions documentation.</a> </p>
+
+<div class="column is-12">
+    <hr />
+</div>
+
+<h2 id="public-leaderboards">Public Leaderboards</h2>
+
+<p class="is-size-5">
+BALSA provides leaderboards for systematic model evaluation and comparison. Each dataset
+in TDC can be thought of as a <b>benchmark</b>. For a model to be useful for a specific therapeutic question,
+it needs to consistently perform well across multiple datasets and tasks. For this reason, we group
+individual benchmarks in TDC into meaningful groups, which we refer to as <b>benchmark groups</b>. Datasets and
+tasks within a benchmark group are carefully selected and centered around the therapeutic question.
+Further, dataset splits and evaluation metrics are also thoughtfully selected to reflect the difficulty of the therapeutic question in a real-world setting.
+</p>
+
+<p class="is-size-5"> For further information see <a href="/benchmark/overview/">Benchmark documentation.</a> </p>
+
+<div class="column is-12">
+    <hr />
+</div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center">
+            BALSA &copy; <a href="https://silentsoft.org">silentsoft.org</a>
+            | theme <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!--<p class="text-muted">Place sticky footer content here.</p>-->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="/js/jquery-1.10.2.min.js "></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+</body>
+
+</html>

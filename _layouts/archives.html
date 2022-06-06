@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="container">{% for archive in site.data.archives %}
+    <div id="v{{archive.version}}" class="col-md-4 col-sm-4 col-xs-4" style="text-align: right;">
+        <h4><a class="h4" href="#v{{archive.version}}">v{{archive.version}}</a></h4>
+        <h6>{{archive.date}}</h6>
+        <p>{% for support in archive.supports %}{% if support == 'windows' %}
+            <i class="fa fa-windows"></i>{% elsif support == 'macosx' %}
+            <i class="fa fa-apple"></i>{% endif %}{% endfor %}
+        </p>
+    </div>
+    <div class="col-md-8 col-sm-8 col-xs-8" style="border-left-style: solid; border-left-color: #ecebeb; border-left-width: 1px; border-bottom-style: solid; border-bottom-color: #ecebeb; border-bottom-width: 1px;">
+        <h4>Files</h4>
+        <ul>{% for file in archive.files %}
+            <li>
+                <a href="/archives/{{file}}">{{file}}</a>
+
+                {% assign checksum = site.data.checksums[file] %}
+                <u role="button" data-toggle="modal" data-target="#checksumModal" data-name="{{file}}" data-sha256="{{checksum.sha256}}">[SHA256]</u>
+            </li>{% endfor %}
+        </ul>
+        <h4>Changes</h4>
+        <ul>{% for change in archive.changes %}
+            <li>{{change}}</li>{% endfor %}
+        </ul>
+    </div>{% endfor %}
+</div>
+<div class="modal fade" id="checksumModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="col-form-label">SHA256 Checksum :</label>
+                        <input type="text" class="form-control" readonly="true"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="copy" type="button" class="btn btn-primary">Copy</button>
+            </div>
+        </div>
+    </div>
+</div>
