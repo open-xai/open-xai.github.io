@@ -18,16 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: BALSA
-email: chiragagarwall12@gmail.com
-domain: balsaxai.github.io # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-
-# baseurl: /balsaxai.github.io/   
-description: BALSA is an open-source library for benchmarking explanations for structure data
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://balsaxai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ""
-github_username:  balsaxai
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
 theme: minima
