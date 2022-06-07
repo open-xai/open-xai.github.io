@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OpenXAI</title>
+    <meta name="description" content="OpenXAI | OpenXAI is an open-source library for benchmarking explanations for structure data">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- <link rel="shortcut icon" href="/favicon.ico?1"> -->
+
+    <meta property="og:image" content="http://actlist.io/img/og-img-1200x630.png" />
+    <meta property="og:image:secure_url" content="https://actlist.io/img/og-img-1200x630.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>OpenXAI | An open-source library for benchmarking explanations for structure data</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="OpenXAI" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="OpenXAI | OpenXAI is an open-source library for benchmarking explanations for structure data" />
+<meta property="og:description" content="OpenXAI | OpenXAI is an open-source library for benchmarking explanations for structure data" />
+<link rel="canonical" href="http://localhost:4000/quick-start" />
+<meta property="og:url" content="http://localhost:4000/quick-start" />
+<meta property="og:site_name" content="OpenXAI" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="OpenXAI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"OpenXAI","name":"OpenXAI","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://localhost:4000/quick-start">
+    <link rel="alternate" type="application/rss+xml" title="OpenXAI" href="http://localhost:4000/feed.xml" />
+
+    
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+            <!--<span><img src="/img/logonav.png"></span>-->
+            OpenXAI
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+                <li ><a href="./quick-start">Getting Started</a></li>
+                <!-- <li ><a href="/plugins/">Explore</a></li> -->
+                <li ><a href="./leaderboard">Leaderboard</a></li>
+                <li ><a href="./paper">Paper</a></li>  
+                <li ><a href="./teams">Teams</a></li>    
+                <li><a href="https://github.com/AI4LIFE-GROUP/XAI-benchmark" target="_blank">GitHub</a></li>
+            </ul>
+            <div class="navbar-right">
+                <!--<form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+        </form>-->
+                <!-- <ul class="nav navbar-nav">
+                    <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <!-- <div class="header-container jumbotron"> -->
+    <!-- <div class="container">
+        <h1>OpenXAI</h1>
+        <p></p>
+    </div> -->
+</div>
+ <div class="page-content">
+
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+
+    <div class="columns is-multiline">
+        
+        <div class="column is-12">
+            <!-- <p class="title is-3 has-text-centered">
+                <span>Core Team</span>
+            </p>
+            <div class="columns is-centered">
+                <div class="column is-6 content has-text-centered">
+                    <p><p>Developing an open-source library for evaluating and benchmarking post hoc explanations.</p>
+                    </p>
+                </div>
+            </div> -->
+            
+           <!--  <div class="columns is-centered has-text-centered">
+            <button class="button is-info is-focused is-hover is-light is-centered">
+                <span class="icon">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span><a href='mailto:marinka@hms.harvard.edu'> Contact us </a></span>
+            </button>
+            </div> -->
+            
+        </div>
+        <div class="column is-12">
+            <div class="columns is-multiline is-centered">
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/chirag.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Chirag Agarwal</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Harvard University and Adobe</p>
+                                <a href="https://chirag126.github.io/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/eshika.jpeg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Eshika Saxena</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Harvard University</p>
+                                <a href="https://www.linkedin.com/in/eshikasaxena/" class="is-link is-small">Profile</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/satya.jpeg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Satyapriya Krishna</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Harvard University</p>
+                                <a href="https://satyapriyakrishna.com/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/martin.jpeg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Martin Pawelczyk</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">University of Tubingen</p>
+                                <a href="https://sites.google.com/view/martinpawelczyk/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+<div class="column is-12" style="margin-bottom: 2rem">
+                       
+                    </div>
+
+                <div class="columns is-multiline is-centered">
+
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/nari.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Nari Johnson</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Carnegie Mellon University</p>
+                                <a href="https://njohnson99.github.io/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+
+
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/isha.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Isha Puri</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Harvard University</p>
+                                <a href="https://www.linkedin.com/in/isha-puri/" class="is-link is-small">Profile</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/marinka.jpeg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Marinka Zitnik</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Harvard University</p>
+                                <a href="https://zitniklab.hms.harvard.edu/bio/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/hima.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Himabindu Lakkaraju</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Harvard University</p>
+                                <a href="https://himalakkaraju.github.io/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                
+                
+
+                
+            </div>
+        </div>
+        <div class="column is-12">
+            <hr />
+        </div>
+        
+ <!--        <div class="column is-12">
+            <p class="title is-3 has-text-centered">
+                <span>Collaborators</span>
+            </p>
+            <div class="columns is-centered">
+                <div class="column is-6 content has-text-centered">
+                    <p>
+</p>
+                </div>
+            </div>
+            
+        </div> -->
+    <!--     <div class="column is-12">
+            <div class="columns is-multiline is-centered">
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/connor_img.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Connor Coley</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">MIT </p>
+                                <a href="https://coley.mit.edu/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/jure_img.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Jure Leskovec</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">Stanford </p>
+                                <a href="https://cs.stanford.edu/~jure/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/jimeng_img.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Jimeng Sun</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">UIUC </p>
+                                <a href="http://sunlab.org/" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            
+                            <figure class="image is-rounded">
+                                <img src="/img/danica_img.jpg">
+                            </figure>
+                            
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Cao (Danica) Xiao</p>
+                            <p class="subtitle is-6">
+                                
+                                <p class="is-small">IQVIA </p>
+                                <a href="https://sites.google.com/view/danicaxiao/home?authuser=0" class="is-link is-small">Website</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+                
+                
+
+                
+            </div>
+        </div>
+        <div class="column is-12">
+            <hr />
+        </div>
+        
+        <div class="column is-12">
+            <p class="title is-3 has-text-centered">
+                <span>Contributors</span>
+            </p>
+            <div class="columns is-centered">
+                <div class="column is-6 content has-text-centered">
+                    <p>
+</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="column is-12">
+            <div class="columns is-multiline is-centered">
+                
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Ben Birnbaum</p>
+                            <p class="subtitle is-6">
+                                <p class="is-small">Stealth Startup </p>
+                                <a href="https://bbirnbaum.com/" class="is-link is-small">Website</a>
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Jannis Born</p>
+                            <p class="subtitle is-6">
+                                <p class="is-small">IBM Research </p>
+                                <a href="https://researcher.watson.ibm.com/researcher/view.php?person=zurich-JAB" class="is-link is-small">Website</a>
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Yannis Papanikolaou</p>
+                            <p class="subtitle is-6">
+                                <p class="is-small">HealX </p>
+                                <a href="https://scholar.google.com/citations?user=Gdx6A_sAAAAJ&hl=el" class="is-link is-small">Website</a>
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="column is-3-desktop is-4-tablet">
+                        <div class="box has-text-centered">
+                            <p class="title is-1"> </p>
+                            <p class="title is-5">Anna Weber</p>
+                            <p class="subtitle is-6">
+                                <p class="is-small">IBM Research </p>
+                                <a href="https://researcher.watson.ibm.com/researcher/view.php?person=zurich-WBR" class="is-link is-small">Website</a>
+                            </p>
+                        </div>
+                    </div>
+                
+                
+
+                
+            </div>
+        </div>
+        <div class="column is-12">
+            <hr />
+        </div>
+        
+        <div class="column is-12">
+            <p class="title is-3 has-text-centered">
+                <span></span>
+            </p>
+            <div class="columns is-centered">
+                <div class="column is-6 content has-text-centered">
+                    <p>
+</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="column is-12">
+            <div class="columns is-multiline is-centered">
+                
+                
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://www.harvard.edu/"><img src="/img/harvard.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://hms.harvard.edu/"><img src="/img/hms.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://web.mit.edu/"><img src="/img/mit.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://www.stanford.edu/"><img src="/img/stanford.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://www.cmu.edu/"><img src="/img/cmu.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://www.gatech.edu/"><img src="/img/georgia-tech.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+                    <div class="column is-3-desktop is-3-tablet">
+                        
+                        <figure class="image is-rounded">
+                            <a href="https://illinois.edu/"><img src="/img/uiuc.png"></a>
+                        </figure>
+                        
+                    </div>
+                
+
+                
+            </div>
+        </div>
+        <div class="column is-12">
+            <hr />
+        </div>
+        
+    </div> -->
+
+                    
+<div class="content">
+    
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+            </div>
+
+    <footer class="footer">
+    <div class="container">
+        <p class="text-center">
+            OpenXAI &copy; <a href="https://silentsoft.org">silentsoft.org</a>
+            | theme <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!--<p class="text-muted">Place sticky footer content here.</p>-->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="/js/jquery-1.10.2.min.js "></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+</body>
+
+</html>
+    </section>

@@ -2307,6 +2307,7 @@ body { padding-top: 70px; margin-bottom: 46px; }
 
 .navbar-form .has-feedback .form-control-feedback { top: 10px; }
 
+/* Leaderboard */
 .datatable { overflow-x: scroll; font-size: 0.8em; text-align: center; clear: both; border-collapse: collapse; table-layout: fixed; word-wrap: break-word; }
 
 .datatable thead, .datatable th { text-align: center; }
@@ -2424,3 +2425,26 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover { background-color: #ecec
 .table-scroll { overflow-x: auto; }
 
 .table-scroll table { width: auto; }
+
+/* Teams */
+.columns:not(.is-desktop) { display: flex; }
+
+.columns:last-child { margin-bottom: -0.75rem; }
+
+.columns { margin-left: -0.75rem; margin-right: -0.75rem; margin-top: -0.75rem; }
+
+.has-text-centered { text-align: center !important; }
+
+.box { background-color: #fff; border-radius: 6px; box-shadow: 0 0.5em 1em -0.125em #0a0a0a80, 0 0px 0 1px #0a0a0a33; color: #4a4a4a; display: block; padding: 1.25rem; }
+
+.columns.is-multiline { flex-wrap: wrap; }
+
+.column.is-12, .column.is-12-tablet { flex: none; width: 100%; }
+
+.column { display: block; flex-basis: 0; flex-grow: 1; flex-shrink: 1; padding: 0.75rem; }
+
+.title:not(:last-child) { margin-bottom: 1.5rem; }
+
+.title.is-3 { font-size: 2rem; }
+
+.columns.is-centered { justify-content: center; }
