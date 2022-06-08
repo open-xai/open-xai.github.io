@@ -104,11 +104,682 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
 
 <!-- <th class="rank sorting sorting_asc" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rank: activate to sort column descending" style="width: 23px;">Rank</th> -->
 
+<button class="collapsible">German Credit</button>
+<div class="collapsible-content">
+  <table id="myTable2" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+    <thead>
+    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+        <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            Standard
+            accuracy
+        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'myTable2')">
+            Feature<br>Agreement (FA) <i class=" fa fa-solid"></i>
+        </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AutoAttack
+            robust
+            accuracy
+        : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'myTable2')">
+            Rank<br>Agreement (RA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            Best known
+            robust
+            accuracy
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'myTable2')">
+            Sign<br>Agreement (SA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'myTable2')">
+            Signed Rank<br>Agreement (SRA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'myTable2')">
+            Rank<br>Correlation (RC) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'myTable2')">
+            Pairwise Rank<br>Agreement (PRA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'myTable2')">
+            Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'myTable2')">
+            Inverse Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(9, 'myTable2')">
+            Relative Input<br>Stability (RIS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(10, 'myTable2')">
+            Relative Output<br>Stability (ROS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'myTable2')">
+            Relative Representation<br>Stability (RRS) <i class=" fa fa-solid fa-arrow-down"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(12, 'myTable2')">
+            Predictive Faithfulness Disparity<i class=" fa fa-solid"></i>
+        </th><th class="venue sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Venue: activate to sort column ascending" style="width: 45px;">Venue</th></tr>
+    </thead>
+    <tbody>
+    <!-- <th class="extra-data sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Extra data: activate to sort column ascending" style="width: 15px;">Extra <br>data</th> -->
+    <!-- <th class="arch sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Architecture: activate to sort column ascending" style="width: 43px;">Architecture</th> -->
+    
+    <tr class="odd">
+        <td class="methoddt">
+            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+            <br>
+            <!-- <span class="td-footer">
+                66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span -->
+        </td>
+        <td class="catd">0.938</td>
+        <td class="aatd">0.810</td>
+        <td class="aa-extd">0.938</td>
+        <td class="aatd">0.814</td>
+        <td class="aatd">0.998</td>
+        <td class="aatd">0.989</td>
+        <td class="aatd">0.169</td>
+        <td class="aatd">0.156</td>
+        <td class="aatd">-0.698</td>
+        <td class="aatd">9.397</td>
+        <td class="aatd">9.397</td>
+        <td class="aatd">0.013</td>
+        <td class="venuetd">KDD'2016</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">0.130</td>
+        <td class="aatd">0.007</td>
+        <td class="aa-extd">0.112</td>
+        <td class="aatd">0.006</td>
+        <td class="aatd">-0.053</td>
+        <td class="aatd">0.488</td>
+        <td class="aatd">0.180</td>
+        <td class="aatd">0.135</td>
+        <td class="aatd">-0.230</td>
+        <td class="aatd">10.056</td>
+        <td class="aatd">10.056</td>
+        <td class="aatd">0.039</td>
+        <td class="venuetd">NeurIPS'2017</td>
+    </tr><tr class="odd">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                65.87% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">0.950</td>
+        <td class="aatd">0.950</td>
+        <td class="aa-extd">0.846</td>
+        <td class="aatd">0.846</td>
+        <td class="aatd">1.000</td>
+        <td class="aatd">1.000</td>
+        <td class="aatd">0.174</td>
+        <td class="aatd">0.149</td>
+        <td class="aatd">-1.384</td>
+        <td class="aatd">5.241</td>
+        <td class="aatd">5.241</td>
+        <td class="aatd">-0.120</td>
+        <td class="venuetd">ICLR Workshop'2014</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 1M synthetic images in training. 64.58% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">0.950</td>
+        <td class="aatd">0.950</td>
+        <td class="aa-extd">0.606</td>
+        <td class="aatd">0.606</td>
+        <td class="aatd">1.000</td>
+        <td class="aatd">1.000</td>
+        <td class="aatd">0.124</td>
+        <td class="aatd">0.202</td>
+        <td class="aatd">-4.780</td>
+        <td class="aatd">4.931</td>
+        <td class="aatd">4.931</td>
+        <td class="aatd">0.013</td>
+        <td class="venuetd">ICML Workshop'2017</td>
+    </tr><tr class="odd">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                Based on the model Rebuffi2021Fixing_70_16_cutmix_extra. 64.20% robust accuracy is due to AutoAttack + transfer APGD from Rebuffi2021Fixing_70_16_cutmix_extra
+            </span> -->
+            
+        </td>
+        <td class="catd">0.950</td>
+        <td class="aatd">0.950</td>
+        <td class="aa-extd">0.846</td>
+        <td class="aatd">0.846</td>
+        <td class="aatd">1.000</td>
+        <td class="aatd">1.000</td>
+        <td class="aatd">0.173</td>
+        <td class="aatd">0.148</td>
+        <td class="aatd">-2.004</td>
+        <td class="aatd">4.560</td>
+        <td class="aatd">4.560</td>
+        <td class="aatd">-0.120</td>
+        <td class="venuetd">ICML'2017</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 1M synthetic images in training. 64.20% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">0.785</td>
+        <td class="aatd">0.161</td>
+        <td class="aa-extd">0.382</td>
+        <td class="aatd">0.071</td>
+        <td class="aatd">0.890</td>
+        <td class="aatd">0.875</td>
+        <td class="aatd">0.161</td>
+        <td class="aatd">0.171</td>
+        <td class="aatd">-0.906</td>
+        <td class="aatd">9.437</td>
+        <td class="aatd">9.437</td>
+        <td class="aatd">0.038</td>
+        <td class="venuetd">arXiv'2016</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+
+<button class="collapsible">Home Equity Line of Credit (HELOC)</button>
+<div class="collapsible-content">
+  <table id="myTable" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+    <thead>
+    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+        <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            Standard
+            accuracy
+        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'myTable')">
+            Feature<br>Agreement (FA) <i class=" fa fa-solid"></i>
+        </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AutoAttack
+            robust
+            accuracy
+        : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'myTable')">
+            Rank<br>Agreement (RA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            Best known
+            robust
+            accuracy
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'myTable')">
+            Sign<br>Agreement (SA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'myTable')">
+            Signed Rank<br>Agreement (SRA) <i class=" fa fa-solid "></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'myTable')">
+            Rank<br>Correlation (RC) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'myTable')">
+            Pairwise Rank<br>Agreement (PRA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'myTable')">
+            Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'myTable')">
+            Inverse Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(9, 'myTable')">
+            Relative Input<br>Stability (RIS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(10, 'myTable')">
+            Relative Output<br>Stability (ROS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'myTable')">
+            Relative Representation<br>Stability (RRS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(12, 'myTable')">
+            Predictive Faithfulness Disparity<i class=" fa fa-solid"></i>
+        </th><th class="venue sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Venue: activate to sort column ascending" style="width: 45px;">Venue</th></tr>
+    </thead>
+    <tbody>
+    <!-- <th class="extra-data sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Extra data: activate to sort column ascending" style="width: 15px;">Extra <br>data</th> -->
+    <!-- <th class="arch sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Architecture: activate to sort column ascending" style="width: 43px;">Architecture</th> -->
+    
+    <tr class="odd">
+        <td class="methoddt">
+            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+            <br>
+            <!-- <span class="td-footer">
+                66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span -->
+        </td>
+        <td class="catd">80</td>
+        <td class="aatd">12</td>
+        
+        <td class="aa-extd">20</td>
+        <td class="aatd">6</td>
+        <td class="aatd">8</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">3</td>
+        <td class="aatd">5</td>
+        <td class="aatd">7</td>
+        <td class="venuetd">KDD'2016</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+                <td class="catd">12</td>
+        <td class="aatd">20</td>
+        
+        <td class="aa-extd">54</td>
+        <td class="aatd">6</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">5</td>
+        <td class="aatd">3</td>
+        <td class="aatd">7</td>
+        <td class="aatd">4</td>
+        <td class="aatd">9</td>
+        <td class="aatd">12</td>
+        <td class="venuetd">NeurIPS'2017</td>
+    </tr><tr class="odd">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                65.87% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">21</td>
+        <td class="aatd">60</td>
+        <td class="aa-extd">50</td>
+        <td class="aatd">8</td>
+        <td class="aatd">7</td>
+        <td class="aatd">10</td>
+        <td class="aatd">2</td>
+        <td class="aatd">4</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">7</td>
+        <td class="venuetd">ICLR Workshop'2014</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 1M synthetic images in training. 64.58% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">90</td>
+        <td class="aatd">45</td>
+        <td class="aa-extd">56</td>
+        <td class="aatd">2</td>
+        <td class="aatd">4</td>
+        <td class="aatd">8</td>
+        <td class="aatd">1</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">6</td>
+        <td class="aatd">2</td>
+        <td class="aatd">2</td>
+        <td class="venuetd">ICML Workshop'2017</td>
+    </tr><tr class="odd">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                Based on the model Rebuffi2021Fixing_70_16_cutmix_extra. 64.20% robust accuracy is due to AutoAttack + transfer APGD from Rebuffi2021Fixing_70_16_cutmix_extra
+            </span> -->
+            
+        </td>
+        <td class="catd">23</td>
+        <td class="aatd">21</td>
+        <td class="aa-extd">32</td>
+        <td class="aatd">9</td>
+        <td class="aatd">2</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">5</td>
+        <td class="aatd">6</td>
+        <td class="aatd">7</td>
+        <td class="aatd">8</td>
+        <td class="aatd">9</td>
+        <td class="venuetd">ICML'2017</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 1M synthetic images in training. 64.20% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">92</td>
+        <td class="aatd">66</td>
+        <td class="aa-extd">56</td>
+        <td class="aatd">1</td>
+        <td class="aatd">9</td>
+        <td class="aatd">8</td>
+        <td class="aatd">1</td>
+        <td class="aatd">2</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">5</td>
+        <td class="aatd">6</td>
+        <td class="venuetd">arXiv'2016</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<button class="collapsible">Adult Income</button>
+<div class="collapsible-content">
+  <table id="myTable4" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+    <thead>
+    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+        <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            Standard
+            accuracy
+        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'myTable4')">
+            Feature<br>Agreement (FA) <i class=" fa fa-solid"></i>
+        </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AutoAttack
+            robust
+            accuracy
+        : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'myTable4')">
+            Rank<br>Agreement (RA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            Best known
+            robust
+            accuracy
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'myTable4')">
+            Sign<br>Agreement (SA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'myTable4')">
+            Signed Rank<br>Agreement (SRA) <i class=" fa fa-solid "></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'myTable4')">
+            Rank<br>Correlation (RC) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'myTable4')">
+            Pairwise Rank<br>Agreement (PRA) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'myTable4')">
+            Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'myTable4')">
+            Inverse Predictive Faithfulness (IPF) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(9, 'myTable4')">
+            Relative Input<br>Stability (RIS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(10, 'myTable4')">
+            Relative Output<br>Stability (ROS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'myTable4')">
+            Relative Representation Stability (RRS) <i class=" fa fa-solid"></i>
+        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+            AA eval.
+            potentially
+            unreliable
+        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(12, 'myTable4')">
+            Predictive Faithfulness Disparity<i class=" fa fa-solid"></i>
+        </th><th class="venue sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Venue: activate to sort column ascending" style="width: 45px;">Venue</th></tr>
+    </thead>
+    <tbody>
+    <!-- <th class="extra-data sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Extra data: activate to sort column ascending" style="width: 15px;">Extra <br>data</th> -->
+    <!-- <th class="arch sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Architecture: activate to sort column ascending" style="width: 43px;">Architecture</th> -->
+    
+    <tr class="odd">
+        <td class="methoddt">
+            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+            <br>
+            <!-- <span class="td-footer">
+                66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span -->
+        </td>
+        <td class="catd">80</td>
+        <td class="aatd">12</td>
+        
+        <td class="aa-extd">20</td>
+        <td class="aatd">6</td>
+        <td class="aatd">8</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">3</td>
+        <td class="aatd">5</td>
+        <td class="aatd">7</td>
+        <td class="venuetd">KDD'2016</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+                <td class="catd">12</td>
+        <td class="aatd">20</td>
+        
+        <td class="aa-extd">54</td>
+        <td class="aatd">6</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">5</td>
+        <td class="aatd">3</td>
+        <td class="aatd">7</td>
+        <td class="aatd">4</td>
+        <td class="aatd">9</td>
+        <td class="aatd">12</td>
+        <td class="venuetd">NeurIPS'2017</td>
+    </tr><tr class="odd">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                65.87% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">21</td>
+        <td class="aatd">60</td>
+        <td class="aa-extd">50</td>
+        <td class="aatd">8</td>
+        <td class="aatd">7</td>
+        <td class="aatd">10</td>
+        <td class="aatd">2</td>
+        <td class="aatd">4</td>
+        <td class="aatd">9</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">7</td>
+        <td class="venuetd">ICLR Workshop'2014</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 1M synthetic images in training. 64.58% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">90</td>
+        <td class="aatd">45</td>
+        <td class="aa-extd">56</td>
+        <td class="aatd">2</td>
+        <td class="aatd">4</td>
+        <td class="aatd">8</td>
+        <td class="aatd">1</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">6</td>
+        <td class="aatd">2</td>
+        <td class="aatd">2</td>
+        <td class="venuetd">ICML Workshop'2017</td>
+    </tr><tr class="odd">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                Based on the model Rebuffi2021Fixing_70_16_cutmix_extra. 64.20% robust accuracy is due to AutoAttack + transfer APGD from Rebuffi2021Fixing_70_16_cutmix_extra
+            </span> -->
+            
+        </td>
+        <td class="catd">23</td>
+        <td class="aatd">21</td>
+        <td class="aa-extd">32</td>
+        <td class="aatd">9</td>
+        <td class="aatd">2</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">5</td>
+        <td class="aatd">6</td>
+        <td class="aatd">7</td>
+        <td class="aatd">8</td>
+        <td class="aatd">9</td>
+        <td class="venuetd">ICML'2017</td>
+    </tr><tr class="even">
+        <td class="methoddt">
+            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+            
+            <br>
+            <!-- <span class="td-footer">
+                It uses additional 1M synthetic images in training. 64.20% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
+            </span> -->
+            
+        </td>
+        <td class="catd">92</td>
+        <td class="aatd">66</td>
+        <td class="aa-extd">56</td>
+        <td class="aatd">1</td>
+        <td class="aatd">9</td>
+        <td class="aatd">8</td>
+        <td class="aatd">1</td>
+        <td class="aatd">2</td>
+        <td class="aatd">3</td>
+        <td class="aatd">4</td>
+        <td class="aatd">5</td>
+        <td class="aatd">6</td>
+        <td class="venuetd">arXiv'2016</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
 <button class="collapsible">SynthGauss</button>
 <div class="collapsible-content">
   <table id="myTable1" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem; "role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
     <thead>
-    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 152px;">Method</th>
+    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
         <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
             Standard
             accuracy
@@ -118,7 +789,7 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
             AutoAttack
             robust
             accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(2, 'myTable1')">
+        : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'myTable1')">
             Rank<br>Agreement (RA) <i class=" fa fa-solid "></i>
         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
             Best known
@@ -189,8 +860,7 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
     <tr class="odd">
         <!-- <td class="ranktd sorting_1">1</td> -->
         <td class="methoddt">
-            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">“Why Should I Trust You?”
-Explaining the Predictions of Any Classifier (LIME)</a>
+            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
             <br>
             <!-- <span class="td-footer">
                 66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
@@ -213,7 +883,7 @@ Explaining the Predictions of Any Classifier (LIME)</a>
     </tr><tr class="even">
         <!-- <td class="ranktd sorting_1">2</td> -->
         <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">A Unified Approach to Interpreting Model Predictions (SHAP)</a>
+            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
             <br>
             <!-- <span class="td-footer">
                 It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
@@ -237,8 +907,7 @@ Explaining the Predictions of Any Classifier (LIME)</a>
     </tr><tr class="odd">
         <!-- <td class="ranktd sorting_1">3</td> -->
         <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Visualising
-Image Classification Models and Saliency Maps (Gradient)</a>
+            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
             
             <br>
             <!-- <span class="td-footer">
@@ -262,7 +931,7 @@ Image Classification Models and Saliency Maps (Gradient)</a>
     </tr><tr class="even">
         <!-- <td class="ranktd sorting_1">4</td> -->
         <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">Removing noise by adding noise (SmoothGrad)</a>
+            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
             
             <br>
             <!-- <span class="td-footer">
@@ -286,7 +955,7 @@ Image Classification Models and Saliency Maps (Gradient)</a>
     </tr><tr class="odd">
         <!-- <td class="ranktd sorting_1">5</td> -->
         <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Axiomatic Attribution for Deep Networks (Integrated Grad)</a>
+            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
             
             <br>
             <!-- <span class="td-footer">
@@ -310,690 +979,7 @@ Image Classification Models and Saliency Maps (Gradient)</a>
     </tr><tr class="even">
         <!-- <td class="ranktd sorting_1">6</td> -->
         <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Not just a black
-box: Learning important features through propagating activation differences (Input x Gradient)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 1M synthetic images in training. 64.20% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">92</td>
-        <td class="aatd">66</td>
-        <td class="aa-extd">56</td>
-        <td class="aatd">1</td>
-        <td class="aatd">9</td>
-        <td class="aatd">8</td>
-        <td class="aatd">1</td>
-        <td class="aatd">2</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">5</td>
-        <td class="aatd">6</td>
-        <td class="venuetd">arXiv'2016</td>
-    </tr>
-</tbody>
-</table>
-</div>
-
-<button class="collapsible">German Credit</button>
-<div class="collapsible-content">
-  <table id="myTable2" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-    <thead>
-    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 152px;">Method</th>
-        <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            Standard
-            accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'myTable2')">
-            Feature<br>Agreement (FA) <i class=" fa fa-solid"></i>
-        </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AutoAttack
-            robust
-            accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(2, 'myTable2')">
-            Rank<br>Agreement (RA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            Best known
-            robust
-            accuracy
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'myTable2')">
-            Sign<br>Agreement (SA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'myTable2')">
-            Signed Rank<br>Agreement (SRA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'myTable2')">
-            Rank<br>Correlation (RC) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'myTable2')">
-            Pairwise Rank<br>Agreement (PRA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'myTable2')">
-            Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'myTable2')">
-            Inverse Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(9, 'myTable2')">
-            Relative Input<br>Stability (RIS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(10, 'myTable2')">
-            Relative Output<br>Stability (ROS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'myTable2')">
-            Relative Representation<br>Stability (RRS) <i class=" fa fa-solid fa-arrow-down"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(12, 'myTable2')">
-            Predictive Faithfulness Disparity<i class=" fa fa-solid"></i>
-        </th><th class="venue sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Venue: activate to sort column ascending" style="width: 45px;">Venue</th></tr>
-    </thead>
-    <tbody>
-    <!-- <th class="extra-data sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Extra data: activate to sort column ascending" style="width: 15px;">Extra <br>data</th> -->
-    <!-- <th class="arch sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Architecture: activate to sort column ascending" style="width: 43px;">Architecture</th> -->
-    
-    <tr class="odd">
-        <td class="methoddt">
-            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">“Why Should I Trust You?”
-Explaining the Predictions of Any Classifier (LIME)</a>
-            <br>
-            <!-- <span class="td-footer">
-                66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span -->
-        </td>
-        <td class="catd">80</td>
-        <td class="aatd">12</td>
-        
-        <td class="aa-extd">20</td>
-        <td class="aatd">6</td>
-        <td class="aatd">8</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">3</td>
-        <td class="aatd">5</td>
-        <td class="aatd">7</td>
-        <td class="venuetd">KDD'2016</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">A Unified Approach to Interpreting Model Predictions (SHAP)</a>
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-                <td class="catd">12</td>
-        <td class="aatd">20</td>
-        
-        <td class="aa-extd">54</td>
-        <td class="aatd">6</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">5</td>
-        <td class="aatd">3</td>
-        <td class="aatd">7</td>
-        <td class="aatd">4</td>
-        <td class="aatd">9</td>
-        <td class="aatd">12</td>
-        <td class="venuetd">NeurIPS'2017</td>
-    </tr><tr class="odd">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Visualising
-Image Classification Models and Saliency Maps (Gradient)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                65.87% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">21</td>
-        <td class="aatd">60</td>
-        <td class="aa-extd">50</td>
-        <td class="aatd">8</td>
-        <td class="aatd">7</td>
-        <td class="aatd">10</td>
-        <td class="aatd">2</td>
-        <td class="aatd">4</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">7</td>
-        <td class="venuetd">ICLR Workshop'2014</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">Removing noise by adding noise (SmoothGrad)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 1M synthetic images in training. 64.58% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">90</td>
-        <td class="aatd">45</td>
-        <td class="aa-extd">56</td>
-        <td class="aatd">2</td>
-        <td class="aatd">4</td>
-        <td class="aatd">8</td>
-        <td class="aatd">1</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">6</td>
-        <td class="aatd">2</td>
-        <td class="aatd">2</td>
-        <td class="venuetd">ICML Workshop'2017</td>
-    </tr><tr class="odd">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Axiomatic Attribution for Deep Networks (Integrated Grad)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                Based on the model Rebuffi2021Fixing_70_16_cutmix_extra. 64.20% robust accuracy is due to AutoAttack + transfer APGD from Rebuffi2021Fixing_70_16_cutmix_extra
-            </span> -->
-            
-        </td>
-        <td class="catd">23</td>
-        <td class="aatd">21</td>
-        <td class="aa-extd">32</td>
-        <td class="aatd">9</td>
-        <td class="aatd">2</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">5</td>
-        <td class="aatd">6</td>
-        <td class="aatd">7</td>
-        <td class="aatd">8</td>
-        <td class="aatd">9</td>
-        <td class="venuetd">ICML'2017</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Not just a black
-box: Learning important features through propagating activation differences (Input x Gradient)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 1M synthetic images in training. 64.20% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">92</td>
-        <td class="aatd">66</td>
-        <td class="aa-extd">56</td>
-        <td class="aatd">1</td>
-        <td class="aatd">9</td>
-        <td class="aatd">8</td>
-        <td class="aatd">1</td>
-        <td class="aatd">2</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">5</td>
-        <td class="aatd">6</td>
-        <td class="venuetd">arXiv'2016</td>
-    </tr>
-</tbody>
-</table>
-</div>
-
-
-<button class="collapsible">Home Equity Line of Credit (HELOC)</button>
-<div class="collapsible-content">
-  <table id="myTable" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-    <thead>
-    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 152px;">Method</th>
-        <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            Standard
-            accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'myTable')">
-            Feature<br>Agreement (FA) <i class=" fa fa-solid"></i>
-        </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AutoAttack
-            robust
-            accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(2, 'myTable')">
-            Rank<br>Agreement (RA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            Best known
-            robust
-            accuracy
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'myTable')">
-            Sign<br>Agreement (SA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'myTable')">
-            Signed Rank<br>Agreement (SRA) <i class=" fa fa-solid "></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'myTable')">
-            Rank<br>Correlation (RC) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'myTable')">
-            Pairwise Rank<br>Agreement (PRA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'myTable')">
-            Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'myTable')">
-            Inverse Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(9, 'myTable')">
-            Relative Input<br>Stability (RIS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(10, 'myTable')">
-            Relative Output<br>Stability (ROS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'myTable')">
-            Relative Representation<br>Stability (RRS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(12, 'myTable')">
-            Predictive Faithfulness Disparity<i class=" fa fa-solid"></i>
-        </th><th class="venue sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Venue: activate to sort column ascending" style="width: 45px;">Venue</th></tr>
-    </thead>
-    <tbody>
-    <!-- <th class="extra-data sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Extra data: activate to sort column ascending" style="width: 15px;">Extra <br>data</th> -->
-    <!-- <th class="arch sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Architecture: activate to sort column ascending" style="width: 43px;">Architecture</th> -->
-    
-    <tr class="odd">
-        <td class="methoddt">
-            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">“Why Should I Trust You?”
-Explaining the Predictions of Any Classifier (LIME)</a>
-            <br>
-            <!-- <span class="td-footer">
-                66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span -->
-        </td>
-        <td class="catd">80</td>
-        <td class="aatd">12</td>
-        
-        <td class="aa-extd">20</td>
-        <td class="aatd">6</td>
-        <td class="aatd">8</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">3</td>
-        <td class="aatd">5</td>
-        <td class="aatd">7</td>
-        <td class="venuetd">KDD'2016</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">A Unified Approach to Interpreting Model Predictions (SHAP)</a>
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-                <td class="catd">12</td>
-        <td class="aatd">20</td>
-        
-        <td class="aa-extd">54</td>
-        <td class="aatd">6</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">5</td>
-        <td class="aatd">3</td>
-        <td class="aatd">7</td>
-        <td class="aatd">4</td>
-        <td class="aatd">9</td>
-        <td class="aatd">12</td>
-        <td class="venuetd">NeurIPS'2017</td>
-    </tr><tr class="odd">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Visualising
-Image Classification Models and Saliency Maps (Gradient)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                65.87% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">21</td>
-        <td class="aatd">60</td>
-        <td class="aa-extd">50</td>
-        <td class="aatd">8</td>
-        <td class="aatd">7</td>
-        <td class="aatd">10</td>
-        <td class="aatd">2</td>
-        <td class="aatd">4</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">7</td>
-        <td class="venuetd">ICLR Workshop'2014</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">Removing noise by adding noise (SmoothGrad)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 1M synthetic images in training. 64.58% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">90</td>
-        <td class="aatd">45</td>
-        <td class="aa-extd">56</td>
-        <td class="aatd">2</td>
-        <td class="aatd">4</td>
-        <td class="aatd">8</td>
-        <td class="aatd">1</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">6</td>
-        <td class="aatd">2</td>
-        <td class="aatd">2</td>
-        <td class="venuetd">ICML Workshop'2017</td>
-    </tr><tr class="odd">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Axiomatic Attribution for Deep Networks (Integrated Grad)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                Based on the model Rebuffi2021Fixing_70_16_cutmix_extra. 64.20% robust accuracy is due to AutoAttack + transfer APGD from Rebuffi2021Fixing_70_16_cutmix_extra
-            </span> -->
-            
-        </td>
-        <td class="catd">23</td>
-        <td class="aatd">21</td>
-        <td class="aa-extd">32</td>
-        <td class="aatd">9</td>
-        <td class="aatd">2</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">5</td>
-        <td class="aatd">6</td>
-        <td class="aatd">7</td>
-        <td class="aatd">8</td>
-        <td class="aatd">9</td>
-        <td class="venuetd">ICML'2017</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Not just a black
-box: Learning important features through propagating activation differences (Input x Gradient)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 1M synthetic images in training. 64.20% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">92</td>
-        <td class="aatd">66</td>
-        <td class="aa-extd">56</td>
-        <td class="aatd">1</td>
-        <td class="aatd">9</td>
-        <td class="aatd">8</td>
-        <td class="aatd">1</td>
-        <td class="aatd">2</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">5</td>
-        <td class="aatd">6</td>
-        <td class="venuetd">arXiv'2016</td>
-    </tr>
-</tbody>
-</table>
-</div>
-
-<button class="collapsible">Adult Income</button>
-<div class="collapsible-content">
-  <table id="myTable4" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-    <thead>
-    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 152px;">Method</th>
-        <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            Standard
-            accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'myTable4')">
-            Feature<br>Agreement (FA) <i class=" fa fa-solid"></i>
-        </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AutoAttack
-            robust
-            accuracy
-        : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(2, 'myTable4')">
-            Rank<br>Agreement (RA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            Best known
-            robust
-            accuracy
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'myTable4')">
-            Sign<br>Agreement (SA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'myTable4')">
-            Signed Rank<br>Agreement (SRA) <i class=" fa fa-solid "></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'myTable4')">
-            Rank<br>Correlation (RC) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'myTable4')">
-            Pairwise Rank<br>Agreement (PRA) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'myTable4')">
-            Predictive<br>Faithfulness (PF) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'myTable4')">
-            Inverse Predictive Faithfulness (IPF) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(9, 'myTable4')">
-            Relative Input<br>Stability (RIS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(10, 'myTable4')">
-            Relative Output<br>Stability (ROS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'myTable4')">
-            Relative Representation Stability (RRS) <i class=" fa fa-solid"></i>
-        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-            AA eval.
-            potentially
-            unreliable
-        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(12, 'myTable4')">
-            Predictive Faithfulness Disparity<i class=" fa fa-solid"></i>
-        </th><th class="venue sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Venue: activate to sort column ascending" style="width: 45px;">Venue</th></tr>
-    </thead>
-    <tbody>
-    <!-- <th class="extra-data sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Extra data: activate to sort column ascending" style="width: 15px;">Extra <br>data</th> -->
-    <!-- <th class="arch sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Architecture: activate to sort column ascending" style="width: 43px;">Architecture</th> -->
-    
-    <tr class="odd">
-        <td class="methoddt">
-            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">“Why Should I Trust You?”
-Explaining the Predictions of Any Classifier (LIME)</a>
-            <br>
-            <!-- <span class="td-footer">
-                66.56% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span -->
-        </td>
-        <td class="catd">80</td>
-        <td class="aatd">12</td>
-        
-        <td class="aa-extd">20</td>
-        <td class="aatd">6</td>
-        <td class="aatd">8</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">3</td>
-        <td class="aatd">5</td>
-        <td class="aatd">7</td>
-        <td class="venuetd">KDD'2016</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">A Unified Approach to Interpreting Model Predictions (SHAP)</a>
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 100M synthetic images in training. 66.10% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-                <td class="catd">12</td>
-        <td class="aatd">20</td>
-        
-        <td class="aa-extd">54</td>
-        <td class="aatd">6</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">5</td>
-        <td class="aatd">3</td>
-        <td class="aatd">7</td>
-        <td class="aatd">4</td>
-        <td class="aatd">9</td>
-        <td class="aatd">12</td>
-        <td class="venuetd">NeurIPS'2017</td>
-    </tr><tr class="odd">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Visualising
-Image Classification Models and Saliency Maps (Gradient)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                65.87% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">21</td>
-        <td class="aatd">60</td>
-        <td class="aa-extd">50</td>
-        <td class="aatd">8</td>
-        <td class="aatd">7</td>
-        <td class="aatd">10</td>
-        <td class="aatd">2</td>
-        <td class="aatd">4</td>
-        <td class="aatd">9</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">7</td>
-        <td class="venuetd">ICLR Workshop'2014</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">Removing noise by adding noise (SmoothGrad)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                It uses additional 1M synthetic images in training. 64.58% robust accuracy is due to the original evaluation (AutoAttack + MultiTargeted)
-            </span> -->
-            
-        </td>
-        <td class="catd">90</td>
-        <td class="aatd">45</td>
-        <td class="aa-extd">56</td>
-        <td class="aatd">2</td>
-        <td class="aatd">4</td>
-        <td class="aatd">8</td>
-        <td class="aatd">1</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">6</td>
-        <td class="aatd">2</td>
-        <td class="aatd">2</td>
-        <td class="venuetd">ICML Workshop'2017</td>
-    </tr><tr class="odd">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Axiomatic Attribution for Deep Networks (Integrated Grad)</a>
-            
-            <br>
-            <!-- <span class="td-footer">
-                Based on the model Rebuffi2021Fixing_70_16_cutmix_extra. 64.20% robust accuracy is due to AutoAttack + transfer APGD from Rebuffi2021Fixing_70_16_cutmix_extra
-            </span> -->
-            
-        </td>
-        <td class="catd">23</td>
-        <td class="aatd">21</td>
-        <td class="aa-extd">32</td>
-        <td class="aatd">9</td>
-        <td class="aatd">2</td>
-        <td class="aatd">3</td>
-        <td class="aatd">4</td>
-        <td class="aatd">5</td>
-        <td class="aatd">6</td>
-        <td class="aatd">7</td>
-        <td class="aatd">8</td>
-        <td class="aatd">9</td>
-        <td class="venuetd">ICML'2017</td>
-    </tr><tr class="even">
-        <td class="methoddt">
-            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Not just a black
-box: Learning important features through propagating activation differences (Input x Gradient)</a>
+            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
             
             <br>
             <!-- <span class="td-footer">
