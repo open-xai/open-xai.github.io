@@ -173,9 +173,13 @@ Datasets, trained models, explanation methods, and evaluation metrics in OpenXAI
 
 <h2 id="installation">Installation</h2>
 
-<p class="is-size-5"> To install the OpenXAI package, open the terminal and type: </p>
+First install the package from the root directory of the project using:
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>balsa
+pip install -e .
+a
+<p class="is-size-5"> To install the OpenXAI package, clone OpenXAI's <a href='https://github.com/AI4LIFE-GROUP/OpenXAI'>repo</a> and install the package from the root directory using: </p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>-e . 
 </code></pre></div></div>
 
 <p class="is-size-5"> The installation of the OpenXAI package is hassle-free with minimum dependency on external packages. </p>
@@ -188,11 +192,11 @@ Datasets, trained models, explanation methods, and evaluation metrics in OpenXAI
 
 <p class="is-size-5"> The data loaders in OpenXAI are lightweight. OpenXAI provides a collection of functionalities with easy-toa-use high-level APIs to benchmark explanations. As an example, to obtain the <code>SynthGauss</code> dataset from the data loader in OpenXAI, do as follows:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">balsa</span> <span class="kn">import</span> <span class="n">Dataloader</span>
-<span class="n">loader_train, loader_test</span> <span class="o">=</span> <span class="n">Dataloader.return_loaders(data_name</span><span class="o">=</span> <span class="s">'synthgauss'</span><span class="p">, download=True</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">openxai.dataloader</span> <span class="kn">import</span> <span class="n">return_loaders</span>
+<span class="n">loader_train, loader_test</span> <span class="o">=</span> <span class="n">return_loaders(data_name</span><span class="o">=</span> <span class="s">'synthgauss'</span><span class="p">, download=True</span><span class="p">)</span>
 <span class="n">inputs, labels</span> <span class="o">=</span> <span class="n">iter(</span><span class="p">loader_test</span><span class="p">)</span><span class="s">.next()</span>
 </code></pre></div></div>
-<p class="is-size-5"> The <code>Dataloader</code> is a PyTorch based data loader holding the entire dataset.</p>
+<!--<p class="is-size-5"> The <code>Dataloader</code> is a PyTorch based data loader holding the entire dataset.</p>-->
 
 <div class="column is-12">
     <hr />
