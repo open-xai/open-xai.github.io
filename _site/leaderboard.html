@@ -104,7 +104,9 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
 
 <!-- <th class="rank sorting sorting_asc" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rank: activate to sort column descending" style="width: 23px;">Rank</th> -->
 
-<button class="collapsible">German Credit</button>
+<button class="collapsible"> Logistic Regression Model</button>
+<div class="collapsible-content">
+    <button class="collapsible sub-collapse">German Credit</button>
 <div class="collapsible-content">
   <table id="myTable2" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
     <thead>
@@ -327,7 +329,7 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
 </div>
 
 
-<button class="collapsible">Home Equity Line of Credit (HELOC)</button>
+<button class="collapsible sub-collapse">Home Equity Line of Credit (HELOC)</button>
 <div class="collapsible-content">
   <table id="myTable" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
     <thead>
@@ -551,7 +553,7 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
 </table>
 </div>
 
-<button class="collapsible">Adult Income</button>
+<button class="collapsible sub-collapse">Adult Income</button>
 <div class="collapsible-content">
   <table id="myTable4" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
     <thead>
@@ -775,7 +777,7 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
 </table>
 </div>
 
-<button class="collapsible">SynthGauss</button>
+<button class="collapsible sub-collapse">SynthGauss</button>
 <div class="collapsible-content">
   <table id="myTable1" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem; "role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
     <thead>
@@ -1004,6 +1006,8 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of explan
 </tbody>
 </table>
 </div>
+</div>
+
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -1016,7 +1020,7 @@ for (i = 0; i < coll.length; i++) {
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = content.scrollHeight + 350 + "px";
     }
   });
 }

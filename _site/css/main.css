@@ -2352,7 +2352,7 @@ table .aa_3d { width: 12%; }
 
 table .aatd, .catd, .methoddt, .aa-extd, .aatd_3d { font-size: 1.1em; }
 
-.collapsible { background-color: #49869f; color: white; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 15px; margin-bottom: 2rem; }
+.collapsible { background-color: #49869f; color: white; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: centre; outline: none; font-size: 20px; margin-bottom: 2rem; }
 
 .active, .collapsible:hover { background-color: #00142d; }
 
@@ -2450,3 +2450,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover { background-color: #ecec
 .title.is-3 { font-size: 2rem; }
 
 .columns.is-centered { justify-content: center; }
+
+.sub-collapse, .sub-collapse:hover { background-color: lightblue; color: black; text-align: left; font-size: 15px; }
+
+.sub-collapse:after { color: black; }

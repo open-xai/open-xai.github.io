@@ -223,9 +223,9 @@ table .aatd,
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: left;
+  text-align: centre;
   outline: none;
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 2rem;
 }
 
@@ -319,4 +319,15 @@ table .catd,
 
 .columns.is-centered {
     justify-content: center;
+}
+
+.sub-collapse, .sub-collapse:hover {
+  background-color: lightblue;
+  color: black;
+  text-align: left;
+  font-size: 15px;
+}
+
+.sub-collapse:after {
+  color: black;
 }
