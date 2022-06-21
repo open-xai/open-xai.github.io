@@ -104,24 +104,26 @@ OpenXAI provides leaderboards for systematic evaluation and comparison of variou
 
 <h2 id="public-leaderboards">Step-by-Step instructions</h2>
 <p class="is-size-5">
-In this section, we walk through how users can extend and contribute to OpenXAI by adding custom datasets, pre-trained models, explanation methods, or evaluation metrics. This <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vrry862F5lIB480nvHm1iiWnj0HJKE1Oc3YlllnD-nuRCQ/viewform" target="_blank">FORM</a> can be used by users to submit requests for new datasets, pre-trained models, explanation methods, or evaluation metrics.
+To participate in the OpenXAI leaderboard, please follow these step-by-step instructions:
 
-\xhdr{Custom Datasets} Adding new datasets into \name’s pipeline is as simple as uploading a \texttt{.csv} file or a \texttt{.zip} folder. Users can submit requests to incorporate new datasets into \name by providing either the complete dataset (with or without data splits) or individual training and testing files for the respective dataset.
+<ul class="is-size-5">
+    <li>Use the OpenXAI benchmark dataloader to retrieve a given dataset.</li>
+    <li>Use the OpenXAI LoadModel to load a pre-trained model.</li>
+    <li>Use the OpenXAI Explainer to load a post hoc explanation method.</li>
+    <li>Quantify the performance of the explanation method using OpenXAI evaluation metrics.</li>
+    <li>Submit your scores using this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vrry862F5lIB480nvHm1iiWnj0HJKE1Oc3YlllnD-nuRCQ/viewform" target="_blank">FORM</a>.</li>
+</ul>
 
-\xhdr{Custom Predictive Models} Users can also submit requests to include new pre-trained models into the \name framework. Here, users have to provide i) model architecture and implementation details, ii) model hyperparameters and training details, and iii) trained weights for reproducing model performance.
-
-\xhdr{Custom Evaluation Metrics} Users can include new evaluation metrics into \name by filling out the submit request form and providing the GitHub link to their code and a summary of their metrics. Once approved, the metric should be implemented as a function in the \texttt{Evaluator} class. The input data, ground-truth labels, model predictions, explanations, and the underlying black-box model are all provided in the \texttt{Evaluator} class. The evaluation metric should return a scalar score as a part of their respective implementation.
-
-\xhdr{Custom Explanation Methods} Users can include new explanation methods into \name’s list of explainers by following the template provided in Figure~\ref{fig:exp-template}. The abstract method defined in Figure~\ref{fig:exp-template} ensures that the output of new/existing explanation methods returns explanations as a tensor. Note that all custom explanation methods should extend the \texttt{Explainer} class. Finally, users must provide the GitHub link to their code and a summary of their explanation method.
-
-We invite submissions to any one or multiple benchmarks in OpenXAI. To be included in the leaderboard, please fill out this \href{https://docs.google.com/forms/d/1uZiZ9oniY5LP-jd92KszcJp_taFgFrk1KtmhiY0YDQ4/edit}{FORM}, include results of your explanation method and provide the full implementation of your algorithm with proper documentations and GitHub link.
+<p class="is-size-5">
+We invite submissions to any one or multiple benchmarks in OpenXAI. To be included in the leaderboard, please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vrry862F5lIB480nvHm1iiWnj0HJKE1Oc3YlllnD-nuRCQ/viewform" target="_blank">FORM</a>, include results of your explanation method and provide the full implementation of your algorithm with proper documentations and GitHub link.
 </p>
 
+<h2 id="public-leaderboards">Explore Leaderboards</h2>
 <!-- <th class="rank sorting sorting_asc" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rank: activate to sort column descending" style="width: 23px;">Rank</th> -->
 
 <button class="collapsible"> Logistic Regression Model</button>
 <div class="collapsible-content">
-    <button class="collapsible sub-collapse">German Credit</button>
+<button class="collapsible sub-collapse">German Credit</button>
 <div class="collapsible-content">
   <table id="myTable2" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
     <thead>

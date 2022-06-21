@@ -2443,7 +2443,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover { background-color: #ecec
 
 .column.is-12, .column.is-12-tablet { flex: none; width: 100%; }
 
-.column { display: block; flex-basis: 0; flex-grow: 1; flex-shrink: 1; padding: 0.75rem; }
+.column { display: block; flex-basis: 0; flex-grow: 1; flex-shrink: 1; padding: 0.0rem; }
 
 .title:not(:last-child) { margin-bottom: 1.5rem; }
 

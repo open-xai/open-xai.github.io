@@ -180,23 +180,9 @@ In addition, it has XAI-ready datasets, trained models, and APIs for popular pos
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">openxai</span> <span class="kn">import</span> <span class="n">Evaluator</span>
 <span class="n">metric_evaluator</span> <span class="o">=</span> <span class="n">Evaluator(inputs, labels, model, explanations</span><span class="p">)</span>
-<span class="n">score</span><span class="o">=</span> <span class="n">metric_evaluator.eval(</span><span class="p">metric</span><span class="o">=</span><span class="s">‘RIS’</span><span class="p">).get_explanations()</span>
+<span class="n">score</span><span class="o">=</span> <span class="n">metric_evaluator.eval(</span><span class="p">metric</span><span class="o">=</span><span class="s">‘RIS’</span>
 </code></pre></div></div>
     
-<div class="column is-12">
-    <hr />
-</div>
-
-<h2 id="ecosystem-of-data-functions-tools-libraries-and-community-resources">Ecosystem of Datasets, Explainers, Tools, Evaluation Metrics, and Community Resources</h2>
-
-<p class="is-size-5"> OpenXAI includes numerous data functions that can be readily used with
-any explanation method. OpenXAI divides its programmatic ecosystem into four broad categories: </p>
-<ul class="is-size-5">
-    <li><strong>Dataloader and Processing</strong>: The dataset class in OpenXAI provides a base template of the dataset class for easier and faster incorporation of new datasets in the evaluation pipeline of OpenXAI. The dataloader in OpenXAI has been developed to output XAI-ready datasets, i.e., providing all intrinsic information of a give dataset including ground-truth explanations and distributions. </li>
-    <li><strong>Explanation</strong>: The core component of OpenXAI is the explanation class which provides an abstract class to implement custom explanation methods for benchmarking. It incorporates a get_explanation method that returns explanations for a given set of input and model predictor. </li>
-    <li><strong>Evaluation</strong>: OpenXAI includes an extensive list of evaluation metrics for quantifying the reliability of generated explanations. The evaluation class leverages generated explanations, ground-truth explanations, and other user-controlled parameters like top-k features.</li>
-  </ul>
-
 <div class="column is-12">
     <hr />
 </div>
