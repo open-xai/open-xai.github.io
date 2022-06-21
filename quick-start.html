@@ -119,52 +119,6 @@ In addition, it has XAI-ready datasets, trained models, and APIs for popular pos
             </div>
 </div>
 
-<!-- <p><img src="/img/tdc_vision.png" alt="Vision for TDC" class="img-responsive" /></p> -->
-
-<!-- <div class="column is-12">
-    <hr />
-</div> -->
-
-<!-- <h2 id="tiered-design-of-therapeutics-data-commons-problem--learning-task--data-set">Tiered Design of Therapeutics Data Commons: “Problem – Learning Task – Data Set”</h2>
-
-<div class="container">
-    <div class="columns is-vcentered">
-        <div class="column is-8">
-              <p class="is-size-5">
-              TDC has an unique three-tiered hierarchical structure, which to our knowledge, is the first attempt at systematically organizing ML for therapeutics. We organize TDC into three distinct <b>problems</b>. For each problem, we give a collection <b>learning tasks</b>. Finally, for each task, we provide a series of <b>datasets</b>.
-              </p> 
-              <p class="is-size-5">
-              In the first tier, after observing a large set of therapeutics tasks, we categorize and abstract out three major problems:
-              </p>
-              <ul>
-                <li><strong>Single-instance prediction </strong> <code>single_pred</code>: Prediction of property for an individual biomedical entity. </li>
-                <li><strong>Multi-instance prediction </strong><code>multi_pred</code>: Prediction of property for multiple biomedical entities. </li>
-                <li><strong>Generation</strong> <code>generation</code>: Generation of a new desirable biomedical entity. </li>
-              </ul>
-        </div>
-        <div class="column is-3 has-text-centered">
-            <img src="/img/tdc_hierarchy.png" alt="TDC hierarchy" class="img-responsive" />
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="columns is-vcentered">
-        <div class="column is-8">
-              <p class="is-size-5">
-              The second tier in the TDC structure is organized into learning tasks. Improvement on these tasks can result in numerous applications, including identifying personalized combinatorial therapies, designing novel class of antibodies, improving disease diagnosis, and finding new cures for emerging diseases.
-        </p>
-        <p class="is-size-5">
-        In the third tier of TDC, we provide multiple datasets for each task. For each dataset, we provide several splits of the dataset into training, validation, and test sets to evaluate model performance.
-        </p>
-              <p class="is-size-5"> </p>
-        </div>
-        <div class="column is-3 has-text-centered">
-            <img src="/img/tdc_problems.png" alt="TDC problems" class="img-responsive" />
-        </div>
-    </div>
-</div> -->
-
 <div class="column is-12">
     <hr />
 </div>
@@ -184,27 +138,37 @@ In addition, it has XAI-ready datasets, trained models, and APIs for popular pos
 
 <h2 id="data-loaders">Data Loaders</h2>
 
-<p class="is-size-5"> The data loaders in OpenXAI are lightweight. OpenXAI provides a collection of functionalities with easy-toa-use high-level APIs to benchmark explanations. As an example, to obtain the <code>SynthGauss</code> dataset from the data loader in OpenXAI, do as follows:</p>
+<p class="is-size-5"> The data loaders in OpenXAI are lightweight. OpenXAI provides a collection of functionalities with easy-toa-use high-level APIs to benchmark explanations. As an example, to obtain the <code>German</code> dataset from the data loader in OpenXAI, do as follows:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">openxai.dataloader</span> <span class="kn">import</span> <span class="n">return_loaders</span>
-<span class="n">loader_train, loader_test</span> <span class="o">=</span> <span class="n">return_loaders(data_name</span><span class="o">=</span> <span class="s">'synthgauss'</span><span class="p">, download=True</span><span class="p">)</span>
+<span class="n">loader_train, loader_test</span> <span class="o">=</span> <span class="n">return_loaders(data_name</span><span class="o">=</span> <span class="s">'german'</span><span class="p">, download=True</span><span class="p">)</span>
 <span class="n">inputs, labels</span> <span class="o">=</span> <span class="n">iter(</span><span class="p">loader_test</span><span class="p">)</span><span class="s">.next()</span>
 </code></pre></div></div>
-<!--<p class="is-size-5"> The <code>Dataloader</code> is a PyTorch based data loader holding the entire dataset.</p>-->
 
 <div class="column is-12">
     <hr />
 </div>
 
-<h2 id="pretrained-models">Pre-trained Models</h2>
+<h2 id="pretrained-models">OpenXAI Pre-trained Models</h2>
 
-<p class="is-size-5"> OpenXAI provides two classes of pre-trained predictive models for transparent and reproducible benchmarking of explanation methods. The code snippet below shows how to load OpenXAI’s pre-trained models using our LoadModel class:</p>
+<p class="is-size-5"> OpenXAI provides two classes of pre-trained predictive models for transparent and reproducible benchmarking of explanation methods. The code snippet below shows how to load OpenXAI’s pre-trained models using our LoadModel class.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">openxai</span> <span class="kn">import</span> <span class="n">LoadModel</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">LoadModel(data_name</span><span class="o">=</span> <span class="s">‘german’</span><span class="p">, ml_model=‘ann’</span><span class="p">)</span>
-<span class="n">inputs, labels</span> <span class="o">=</span> <span class="n">iter(</span><span class="p">loader_test</span><span class="p">)</span><span class="s">.next()</span>
 </code></pre></div></div>
 
+<div class="column is-12">
+    <hr />
+</div>
+    
+<h2 id="pretrained-models">OpenXAI Explainers</h2>
+
+<p class="is-size-5">Explanation methods included in OpenXAI are readily accessible through the <i>Explainer class</i>. Users need to specify the method name in order to invoke the appropriate method and generate explanations.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">openxai</span> <span class="kn">import</span> <span class="n">Explainer</span>
+<span class="n">exp_method</span> <span class="o">=</span> <span class="n">Explainer(method</span><span class="o">=</span> <span class="s">‘LIME’</span><span class="p">)</span>
+</code></pre></div></div>
+<span class="n">explanations</span> <span class="o">=</span> <span class="n">exp_method.get_explanations(</span><span class="p">model,</span><span class="p">X=inputs, y=labels)</span>
 <div class="column is-12">
     <hr />
 </div>
