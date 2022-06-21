@@ -174,6 +174,19 @@ In addition, it has XAI-ready datasets, trained models, and APIs for popular pos
     <hr />
 </div>
 
+<h2 id="pretrained-models">Evaluation</h2>
+
+<p class="is-size-5">Benchmarking an explanation method using evaluation metrics is quite simple and the code snippet below describes how to invoke the RIS metric. </p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">openxai</span> <span class="kn">import</span> <span class="n">Evaluator</span>
+<span class="n">metric_evaluator</span> <span class="o">=</span> <span class="n">Evaluator(inputs, labels, model, explanations</span><span class="p">)</span>
+<span class="n">score</span><span class="o">=</span> <span class="n">metric_evaluator.eval(</span><span class="p">metric</span><span class="o">=</span><span class="s">‘RIS’</span><span class="p">).get_explanations()</span>
+</code></pre></div></div>
+    
+<div class="column is-12">
+    <hr />
+</div>
+
 <h2 id="ecosystem-of-data-functions-tools-libraries-and-community-resources">Ecosystem of Datasets, Explainers, Tools, Evaluation Metrics, and Community Resources</h2>
 
 <p class="is-size-5"> OpenXAI includes numerous data functions that can be readily used with
