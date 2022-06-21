@@ -99,23 +99,25 @@
     <h1 id="introduction">Introduction</h1>
 
 <p class="is-size-5"> 
-As machine learning models are increasingly being deployed in high-stakes settings such as finance and law, it becomes critical to ensure that individuals who are adversely affected by these model predictions are provided with a corresponding explanation. To this end, several algorithms have been proposed in eXplainable Artificial Intelligence (XAI) literature to generate explanations for affected individuals. However, the lack of high-quality benchmarks impedes the advancement of XAI. Here, <b>OpenXAI supports the development of novel explanation methods and evaluation metrics, and our publicly available leaderboards allow for easy and transparent comparison of explanation methods.</b>  
+As predictive models are increasingly deployed in critical domains (e.g., healthcare, law, and finance), there has been a growing emphasis on explaining the predictions of these models to decision makers and relevant stakeholders so that they can understand the rationale behind model predictions, and determine if and when to rely on these predictions.    
+To this end, several algorithms have been proposed in eXplainable Artificial Intelligence (XAI) literature to explain models in a post hoc manner. While several types of post hoc explanation methods have been proposed in recent literature, there is little to no work on systematically benchmarking these methods in an efficient and transparent manner.
+OpenXAI is a comprehensive and extensible open-source framework for evaluating and benchmarking post hoc explanation methods.    
+OpenXAI supports the development of novel explanation methods and evaluation metrics, and our publicly available leaderboards allow for easy and transparent comparison of explanation methods across diverse evaluation metrics.  
 </p>
 
 <p class="is-size-5">
-OpenXAI comprises of evaluation metrics to assess the faithfulness (both with and without ground truth), stability, and fairness of post hoc explanations. It contains widely used XAI-ready datasets, explanation methods, benchmarks and leaderboards, and extensive Python programming functionality.
+OpenXAI comprises of evaluation metrics to assess the faithfulness (both with and without ground truth), stability, and fairness of post hoc explanations. It contains widely used XAI-ready datasets, explanation methods, publicly available leaderboards, and extensive Python programming functionality.
 </p>
 
 <p class="is-size-5">
-Datasets, trained models, explanation methods, and evaluation metrics in OpenXAI are XAI-ready i.e., preprocessed data and pre-trained models are readily available for researchers and practitioners so that they can directly use them for benchmarking explanation methods. OpenXAI APIs can be readily integrated into the design and development of new explanation methods. 
+Datasets, trained models, explanation methods, and evaluation metrics in OpenXAI are XAI-ready i.e., preprocessed data and trained models are readily available for researchers and practitioners to benchmark existing or new explanation methods. 
 </p>
 
 <div class="container" style="padding: 0;">
             <div class="columns is-vcentered">
                 <div class="column is-12 is-size-5">
                     <div class="box has-background-info has-text-white">
-                        <b> for XAI</b><br />
-                        We envision OpenXAI to be an interface between XAI researchers and practitioners. Researchers can propose, integrate, and benchmark new explanation methods using OpenXAI, and ML practitioners can readily compare these methods using our APIs and leaderboard. 
+                        We envision OpenXAI to be an interface between XAI researchers and practitioners. Researchers can benchmark new explanation methods using OpenXAI, and also integrate them into OpenXAI framework and our public leaderboards, and ML practitioners can readily compare these methods using our APIs and leaderboard. 
                 </div>
             </div>
 </div>
