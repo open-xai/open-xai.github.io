@@ -2406,9 +2406,143 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             
         </div>
 
-        <button class="collapsible sub-collapse"> Logistic Regression Model</button>
+        <!-- <button class="collapsible sub-collapse"> Logistic Regression Model</button>
         <div class="collapsible-content">
-
+            <h4> Faithfulness</h4>
+            <table id="lr_faith_gmsc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Standard
+                        accuracy
+                    : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_gmsc')">
+                        FA <i class=" fa fa-solid"></i>
+                    </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AutoAttack
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_gmsc')">
+                        RA <i class=" fa fa-solid"></i>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Best known
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_gmsc')">
+                        SA <i class=" fa fa-solid"></i>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_gmsc')">
+                        SRA <i class=" fa fa-solid"></i>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_gmsc')">
+                        RC <i class=" fa fa-solid"></i>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_gmsc')">
+                        PRA <i class=" fa fa-solid"></i>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_gmsc')">
+                        PGU <i class=" fa fa-solid"></i>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_gmsc')">
+                        PGI <i class=" fa fa-solid"></i>
+                    </th>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="catd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aa-extd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="catd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aa-extd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aa-extd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="catd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aa-extd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aa-extd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="catd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aa-extd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                    <td class="aatd">TBD</td>
+                </tr>
+                </tbody>
+            </table>
             <h4> Stability</h4>
             <table id="lr_stab_gmsc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
                 <thead>
@@ -2433,7 +2567,6 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             RRS <i class=" fa fa-solid"></i>
                         </th>
                 </thead>
-
                 <tbody>
                     <tr class="odd">
                         <td class="methoddt">
@@ -2486,14 +2619,10 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     </tr>
                 </tbody>
             </table>
-
     </div>
-
-
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
-
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
@@ -2505,7 +2634,6 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-
 function sortTable(n, tableId) {
   var table,
     rows,
@@ -2517,7 +2645,6 @@ function sortTable(n, tableId) {
     dir,
     switchcount = 0;
   table = document.getElementById(tableId);
-
   switching = true;
   //Set the sorting direction to ascending:
   dir = "asc";
@@ -2552,8 +2679,6 @@ function sortTable(n, tableId) {
           icon[0].classList.add("fa-arrow-down");
           icon[0].classList.remove("fa-arrow-up");
           break;
-
-
           // col.classList.remove("fa");
         }
       } else if (dir == "desc") {
@@ -2583,16 +2708,11 @@ function sortTable(n, tableId) {
     }
   }
 }
-
-
 </script>
-
     </section>
         </div>
-
     </div>
 </div>
-
     <footer class="footer">
     <div class="container">
         <p class="text-center">
