@@ -45,7 +45,7 @@
 </head>
 
 
-<body>
+<body onload="defaultSort();">
 
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container navbar-container">
@@ -121,6 +121,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
 <h2 id="public-leaderboards">Explore Leaderboards</h2>
 <!-- <th class="rank sorting sorting_asc" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rank: activate to sort column descending" style="width: 23px;">Rank</th> -->
 
+
+
 <button class="collapsible">German Credit</button>
     <div class="collapsible-content">
         <button class="collapsible sub-collapse"> Neural Network Model</button>
@@ -134,13 +136,21 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'neuralMyTable2')">
-                        PGU <i class=" fa fa-solid"></i>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                    <span class="custom-tooltip">
+                        PGI <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                    </span>
+                    
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'neuralMyTable2')">
-                        PGI <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                            PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
                     </th>
                 </tr>
                 </thead>
@@ -151,44 +161,43 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                         <br>
                     </td>
-                    <td class="aatd">0.68</td>
                     <td class="aatd">0.42</td>
+                    <td class="aatd">0.68</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                         <br>
                     </td>
-                    <td class="aatd">0.64</td>
                     <td class="aatd">0.44</td>
+                    <td class="aatd">0.64</td>                    
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
-                    <td class="aatd">0.68</td>
                     <td class="aatd">0.39</td>
+                    <td class="aatd">0.68</td>                    
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                         <br>
                     </td>
-                    <td class="aatd">0.66</td>
                     <td class="aatd">0.49</td>
+                    <td class="aatd">0.66</td>                    
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-
                         <br>
                     </td>
-                    <td class="aatd">0.68</td>
                     <td class="aatd">0.40</td>
+                    <td class="aatd">0.68</td>                    
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
-                    <td class="aatd">0.62</td>
                     <td class="aatd">0.45</td>
+                    <td class="aatd">0.62</td>                    
                 </tr>
             </tbody>
             </table>
@@ -202,19 +211,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_german')">
-                        RIS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                            RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                        </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_german')">
-                        ROS <i class=" fa fa-solid"></i>
+                       <span class="custom-tooltip">
+                            ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                        </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_german')">
-                        RRS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                            RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                        </span>
                     </th>
                 </tr>
                 </thead>
@@ -282,7 +300,10 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'nn_fair_german')">
-                        Fairness@PGU<i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                            Fairness@PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
                     </th>
                     
                 </tr>
@@ -345,49 +366,74 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 Standard
                 accuracy
             : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_german')">
-                FA <i class=" fa fa-solid"></i>
+                <span class="custom-tooltip">
+                     FA <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                </span>
             </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AutoAttack
                 robust
                 accuracy
             : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_german')">
-                RA <i class=" fa fa-solid"></i>
+                <span class="custom-tooltip">
+                    RA <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 Best known
                 robust
                 accuracy
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_german')">
-                SA <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    SA <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_german')">
-                SRA <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    SRA <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_german')">
-                RC <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    RC <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_german')">
-                PRA <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    PRA <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_german')">
-                PGU <i class=" fa fa-solid"></i>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                 <span class="custom-tooltip">
+                    PGI <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                </span>
+            </th>
+            <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_german')">
-                PGI <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    PGU <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                </span>
             </th>
         </thead>
         <tbody>
@@ -402,8 +448,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">0.814</td>
             <td class="aatd">0.998</td>
             <td class="aatd">0.989</td>
+            <td class="aatd">0.156</td>            
             <td class="aatd">0.169</td>
-            <td class="aatd">0.156</td>
         </tr><tr class="even">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
@@ -415,8 +461,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">0.006</td>
             <td class="aatd">-0.053</td>
             <td class="aatd">0.488</td>
+            <td class="aatd">0.135</td>            
             <td class="aatd">0.180</td>
-            <td class="aatd">0.135</td>
         </tr><tr class="odd">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
@@ -428,8 +474,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">0.846</td>
             <td class="aatd">1.000</td>
             <td class="aatd">1.000</td>
+            <td class="aatd">0.149</td>            
             <td class="aatd">0.174</td>
-            <td class="aatd">0.149</td>
         </tr><tr class="even">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -441,8 +487,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">0.606</td>
             <td class="aatd">1.000</td>
             <td class="aatd">1.000</td>
+            <td class="aatd">0.202</td>            
             <td class="aatd">0.124</td>
-            <td class="aatd">0.202</td>
         </tr><tr class="odd">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -454,8 +500,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">0.846</td>
             <td class="aatd">1.000</td>
             <td class="aatd">1.000</td>
-            <td class="aatd">0.173</td>
             <td class="aatd">0.148</td>
+            <td class="aatd">0.173</td>
         </tr><tr class="even">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
@@ -467,8 +513,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">0.071</td>
             <td class="aatd">0.890</td>
             <td class="aatd">0.875</td>
+            <td class="aatd">0.171</td>            
             <td class="aatd">0.161</td>
-            <td class="aatd">0.171</td>
         </tr>
         </tbody>
         </table>
@@ -482,19 +528,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_german')">
-                RIS <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    RIS <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_german')">
-                ROS <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    ROS <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_german')">
-                RRS <i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    RRS <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                </span>
             </th>
         </thead>
         <tbody>
@@ -559,7 +614,10 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 potentially
                 unreliable
             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(7, 'lr_fair_german')">
-                Fairness@PGU<i class=" fa fa-solid"></i>
+                 <span class="custom-tooltip">
+                    Fairness@PGU <i class=" fa fa-solid"></i>
+                    <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                </span>
             </th>
         </thead>
         <tbody>
@@ -585,7 +643,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <br>
             </td>
            
-            <td class="aatd">-0.120</td>
+            <td class="aatd">0.120</td>
             
         </tr><tr class="even">
             <td class="methoddt">
@@ -601,7 +659,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <br>
             </td>
             
-            <td class="aatd">-0.120</td>
+            <td class="aatd">0.120</td>
            
             <!-- <td class="venuetd">ICML'2017</td> -->
         </tr><tr class="even">
@@ -631,13 +689,20 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_heloc')">
-                    PGU <i class=" fa fa-solid"></i>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                     <span class="custom-tooltip">
+                         PGI <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                    </span>
+                </th>
+                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_heloc')">
-                    PGI <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                    </span>
                 </th>
             </tr>
             </thead>
@@ -647,43 +712,43 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                     <br>
                 </td>
+                <td class="aatd">0.26</td>                
                 <td class="aatd">0.24</td>
-                <td class="aatd">0.26</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                     <br>
                 </td>
+                <td class="aatd">0.26</td>                
                 <td class="aatd">0.23</td>
-                <td class="aatd">0.26</td>
             </tr><tr class="odd">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                     <br>
                 </td>
+                <td class="aatd">0.24</td>                
                 <td class="aatd">0.26</td>
-                <td class="aatd">0.24</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                     <br>
                 </td>
+                <td class="aatd">0.33</td>                
                 <td class="aatd">0.13</td>
-                <td class="aatd">0.33</td>
             </tr><tr class="odd">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                     <br>
                 </td>
+                <td class="aatd">0.24</td>                
                 <td class="aatd">0.26</td>
-                <td class="aatd">0.24</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                     <br>
                 </td>
+                <td class="aatd">0.25</td>                
                 <td class="aatd">0.23</td>
-                <td class="aatd">0.25</td>
             </tr>
             </tbody>
             </table>
@@ -697,19 +762,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_heloc')">
-                    RIS <i class=" fa fa-solid"></i>
+                   <span class="custom-tooltip">
+                         RIS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_heloc')">
-                    ROS <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         ROS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_heloc')">
-                    RRS <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         RRS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                    </span>
                 </th>
             </tr>
             </thead>
@@ -780,49 +854,74 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     Standard
                     accuracy
                 : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_heloc')">
-                    FA <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         FA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                    </span>
                 </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AutoAttack
                     robust
                     accuracy
                 : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_heloc')">
-                    RA <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         RA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     Best known
                     robust
                     accuracy
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_heloc')">
-                    SA <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         SA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_heloc')">
-                    SRA <i class=" fa fa-solid "></i>
+                    <span class="custom-tooltip">
+                         SRA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_heloc')">
-                    RC <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         RC <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_heloc')">
-                    PRA <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         PRA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_heloc')">
-                    PGU <i class=" fa fa-solid"></i>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                    <span class="custom-tooltip">
+                         PGI <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                    </span>
+                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_heloc')">
-                    PGI <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                    </span>
+                </th>   
                 </th>
             </tr>
             </thead>
@@ -838,8 +937,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">0.670</td>
                 <td class="aatd">0.994</td>
                 <td class="aatd">0.982</td>
+                <td class="aatd">0.156</td>                
                 <td class="aatd">0.104</td>
-                <td class="aatd">0.156</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
@@ -851,8 +950,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">0.024</td>
                 <td class="aatd">0.384</td>
                 <td class="aatd">0.645</td>
+                <td class="aatd">0.121</td>                
                 <td class="aatd">0.136</td>
-                <td class="aatd">0.121</td>
             </tr><tr class="odd">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
@@ -864,8 +963,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">0.469</td>
                 <td class="aatd">1.000</td>
                 <td class="aatd">1.000</td>
+                <td class="aatd">0.129</td>                
                 <td class="aatd">0.131</td>
-                <td class="aatd">0.129</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -877,8 +976,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">0.274</td>
                 <td class="aatd">1.000</td>
                 <td class="aatd">1.000</td>
+                <td class="aatd">0.054</td>                
                 <td class="aatd">0.177</td>
-                <td class="aatd">0.054</td>
             </tr><tr class="odd">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -890,8 +989,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">0.469</td>
                 <td class="aatd">1.000</td>
                 <td class="aatd">1.000</td>
+                <td class="aatd">0.127</td>                
                 <td class="aatd">0.132</td>
-                <td class="aatd">0.127</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
@@ -903,8 +1002,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">0.022</td>
                 <td class="aatd">0.390</td>
                 <td class="aatd">0.641</td>
+                <td class="aatd">0.123</td>                
                 <td class="aatd">0.135</td>
-                <td class="aatd">0.123</td>
             </tr>
             </tbody>
             </table>
@@ -918,19 +1017,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_heloc')">
-                    RIS <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         RIS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_heloc')">
-                    ROS <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         ROS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                    </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
                     potentially
                     unreliable
                 : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_heloc')">
-                    RRS <i class=" fa fa-solid"></i>
+                    <span class="custom-tooltip">
+                         RRS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                    </span>
                 </th>
             </tr>
             </thead>
@@ -1007,13 +1115,20 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_adult')">
-                        PGU <i class=" fa fa-solid"></i>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        <span class="custom-tooltip">
+                         PGI <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                    </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_adult')">
-                        PGI <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                    </span>
                     </th>
                 </tr>
                 </thead>
@@ -1023,43 +1138,43 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                         <br>
                     </td>
+                    <td class="aatd">0.67</td>                    
                     <td class="aatd">0.26</td>
-                    <td class="aatd">0.67</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                         <br>
                     </td>
+                    <td class="aatd">0.53</td>                    
                     <td class="aatd">0.33</td>
-                    <td class="aatd">0.53</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
+                    <td class="aatd">0.29</td>                    
                     <td class="aatd">0.64</td>
-                    <td class="aatd">0.29</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                         <br>
                     </td>
+                    <td class="aatd">0.70</td>                    
                     <td class="aatd">0.12</td>
-                    <td class="aatd">0.70</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                         <br>
                     </td>
+                    <td class="aatd">0.29</td>                    
                     <td class="aatd">0.64</td>
-                    <td class="aatd">0.29</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
+                    <td class="aatd">0.58</td>                    
                     <td class="aatd">0.26</td>
-                    <td class="aatd">0.58</td>
                 </tr>
             </tbody>
             </table>
@@ -1073,19 +1188,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_adult')">
-                        RIS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         RIS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_adult')">
-                        ROS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         ROS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_adult')">
-                        RRS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         RRS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                    </span>
                     </th>
                 </tr>
                 </thead>
@@ -1151,7 +1275,10 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_fair_adult')">
-                        Fairness@PGU <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         Fairness@PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                    </span>
                     </th>
                 </tr>
                 </thead>
@@ -1213,49 +1340,73 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         Standard
                         accuracy
                     : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_adult')">
-                        FA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         FA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                    </span>
                     </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AutoAttack
                         robust
                         accuracy
                     : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_adult')">
-                        RA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         RA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         Best known
                         robust
                         accuracy
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_adult')">
-                        SA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         SA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_adult')">
-                        SRA <i class=" fa fa-solid "></i>
+                        <span class="custom-tooltip">
+                         SRA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_adult')">
-                        RC <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         RC <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_adult')">
-                        PRA <i class=" fa fa-solid"></i>
+                       <span class="custom-tooltip">
+                         PRA <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_adult')">
-                        PGU <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         PGI <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_adult')">
-                        PGI <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                    </span>
                     </th>
                 </tr>
                 </thead>
@@ -1272,8 +1423,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.689</td>
                     <td class="aatd">0.921</td>
                     <td class="aatd">0.913</td>
+                    <td class="aatd">0.420</td>                    
                     <td class="aatd">0.269</td>
-                    <td class="aatd">0.420</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
@@ -1285,8 +1436,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.009</td>
                     <td class="aatd">0.379</td>
                     <td class="aatd">0.655</td>
+                    <td class="aatd">0.391</td>                    
                     <td class="aatd">0.205</td>
-                    <td class="aatd">0.391</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
@@ -1298,8 +1449,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.136</td>
                     <td class="aatd">1.000</td>
                     <td class="aatd">1.000</td>
+                    <td class="aatd">0.297</td>                    
                     <td class="aatd">0.391</td>
-                    <td class="aatd">0.297</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -1311,8 +1462,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.741</td>
                     <td class="aatd">1.000</td>
                     <td class="aatd">1.000</td>
+                    <td class="aatd">0.485</td>                    
                     <td class="aatd">0.082</td>
-                    <td class="aatd">0.485</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -1324,8 +1475,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.138</td>
                     <td class="aatd">1.000</td>
                     <td class="aatd">1.000</td>
+                    <td class="aatd">0.297</td>                    
                     <td class="aatd">0.392</td>
-                    <td class="aatd">0.297</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
@@ -1337,8 +1488,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.003</td>
                     <td class="aatd">0.281</td>
                     <td class="aatd">0.580</td>
+                    <td class="aatd">0.395</td>                    
                     <td class="aatd">0.193</td>
-                    <td class="aatd">0.395</td>
                 </tr>
             </tbody>
             </table>
@@ -1352,19 +1503,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_adult')">
-                        RIS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         RIS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_adult')">
-                        ROS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         ROS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_adult')">
-                        RRS <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         RRS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                    </span>
                     </th>
                 </tr>
                 </thead>
@@ -1431,7 +1591,10 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_fair_adult')">
-                        Fairness@PGU <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                         Fairness@PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                    </span>
                     </th>
                 </tr>
                 </thead>
@@ -1503,13 +1666,19 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_synth')">
-                        PGU <i class=" fa fa-solid "></i>
+                    <span class="custom-tooltip">
+                         PGI <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_synth')">
-                        PGI <i class=" fa fa-solid "></i>
+                        <span class="custom-tooltip">
+                         PGU <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                    </span>
                     </th>
                 </tr>
             </thead>
@@ -1519,44 +1688,44 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                         <br>
                     </td>
+                    <td class="aatd">0.25</td>                    
                     <td class="aatd">0.35</td>
-                    <td class="aatd">0.25</td>
                 </tr><tr class="even">
                     <!-- <td class="ranktd sorting_1">2</td> -->
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                         <br>
                     </td>
+                    <td class="aatd">0.32</td>                    
                     <td class="aatd">0.27</td>
-                    <td class="aatd">0.32</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
+                    <td class="aatd">0.31</td>                    
                     <td class="aatd">0.29</td>
-                    <td class="aatd">0.31</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                         <br>
                     </td>
+                    <td class="aatd">0.41</td>                    
                     <td class="aatd">0.13</td>
-                    <td class="aatd">0.41</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                         <br>
                     </td>
+                    <td class="aatd">0.31</td>                    
                     <td class="aatd">0.29</td>
-                    <td class="aatd">0.31</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
+                    <td class="aatd">0.31</td>                    
                     <td class="aatd">0.29</td>
-                    <td class="aatd">0.31</td>
                 </tr>
             </tbody>
             </table>
@@ -1570,19 +1739,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         potentially
                         unreliable
                         : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_synth')">
-                        RIS <i class="fa fa-solid "></i>
+                        <span class="custom-tooltip">
+                         RIS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_synth')">
-                        ROS <i class=" fa fa-solid "></i>
+                        <span class="custom-tooltip">
+                         ROS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                    </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_synth')">
-                        RRS <i class=" fa fa-solid "></i>
+                        <span class="custom-tooltip">
+                         RRS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                    </span>
                     </th>
                     </th>
                 </tr>
@@ -1656,49 +1834,73 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             Standard
                             accuracy
                         : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_synth')">
-                            FA <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 FA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                            </span>
                         </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AutoAttack
                             robust
                             accuracy
                         : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_synth')">
-                            RA <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             Best known
                             robust
                             accuracy
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_synth')">
-                            SA <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 SA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_synth')">
-                            SRA <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 SRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_synth')">
-                            RC <i class=" fa fa-solid "></i>
+                           <span class="custom-tooltip">
+                                 RC <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_synth')">
-                            PRA <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_synth')">
-                            PGU <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_synth')">
-                            PGI <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1714,8 +1916,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.762</td>
                     <td class="aatd">0.995</td>
                     <td class="aatd">0.986</td>
+                    <td class="aatd">0.154</td>                    
                     <td class="aatd">0.180</td>
-                    <td class="aatd">0.154</td>
                     </tr>
                     <tr class="even">
                     <td class="methoddt">
@@ -1728,8 +1930,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.068</td>
                     <td class="aatd">0.873</td>
                     <td class="aatd">0.860</td>
+                    <td class="aatd">0.171</td>                    
                     <td class="aatd">0.160</td>
-                    <td class="aatd">0.171</td>
                     </tr>
                     <tr class="odd">
                     <td class="methoddt">
@@ -1742,8 +1944,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.464</td>
                     <td class="aatd">1.000</td>
                     <td class="aatd">1.000</td>
+                    <td class="aatd">0.171</td>                    
                     <td class="aatd">0.162</td>
-                    <td class="aatd">0.171</td>
                     </tr>
                     <tr class="even">
                     <td class="methoddt">
@@ -1756,8 +1958,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.456</td>
                     <td class="aatd">1.000</td>
                     <td class="aatd">1.000</td>
+                    <td class="aatd">0.227</td>                    
                     <td class="aatd">0.063</td>
-                    <td class="aatd">0.227</td>
                     </tr>
                     <tr class="odd">
                     <td class="methoddt">
@@ -1770,8 +1972,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.464</td>
                     <td class="aatd">1.000</td>
                     <td class="aatd">1.000</td>
+                    <td class="aatd">0.171</td>                    
                     <td class="aatd">0.163</td>
-                    <td class="aatd">0.171</td>
                     </tr>
                     <tr class="even">
                     <td class="methoddt">
@@ -1784,8 +1986,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.071</td>
                     <td class="aatd">0.890</td>
                     <td class="aatd">0.875</td>
+                    <td class="aatd">0.171</td>                    
                     <td class="aatd">0.161</td>
-                    <td class="aatd">0.171</td>
                     </tr>
                 </tbody>
             </table>
@@ -1800,19 +2002,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'lr_stab_synth')">
-                            RIS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_synth')">
-                            ROS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_synth')">
-                            RRS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1892,13 +2103,19 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_compas')">
-                            PGU <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_compas')">
-                            PGI <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -1908,44 +2125,44 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                             <br>
                         </td>
-                        <td class="aatd">0.247</td>
                         <td class="aatd">0.232</td>
+                        <td class="aatd">0.247</td>                        
                     </tr><tr class="even">
                         <!-- <td class="ranktd sorting_1">2</td> -->
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                             <br>
                         </td>
-                        <td class="aatd">0.194</td>
                         <td class="aatd">0.274</td>
+                        <td class="aatd">0.194</td>                        
                     </tr><tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                             <br>
                         </td>
                         <td class="aatd">0.24</td>
-                        <td class="aatd">0.24</td>
+                        <td class="aatd">0.24</td>                        
                     </tr><tr class="even">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                             <br>
                         </td>
-                        <td class="aatd">0.106</td>
                         <td class="aatd">0.324</td>
+                        <td class="aatd">0.106</td>                        
                     </tr><tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                             <br>
                         </td>
-                        <td class="aatd">0.238</td>
                         <td class="aatd">0.24</td>
+                        <td class="aatd">0.238</td>                        
                     </tr><tr class="even">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                             <br>
                         </td>
+                        <td class="aatd">0.254</td>                        
                         <td class="aatd">0.216</td>
-                        <td class="aatd">0.254</td>
                     </tr>
                 </tbody>
             </table>
@@ -1959,19 +2176,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_compas')">
-                            RIS <i class="fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_compas')">
-                            ROS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_compas')">
-                            RRS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                            </span>
                         </th>
                         </th>
                     </tr>
@@ -2042,49 +2268,73 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         Standard
                         accuracy
                     : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_compas')">
-                        FA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 FA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                            </span>
                     </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AutoAttack
                         robust
                         accuracy
                     : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_compas')">
-                        RA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 RA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                            </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         Best known
                         robust
                         accuracy
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_compas')">
-                        SA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 SA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better.</span>
+                            </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_compas')">
-                        SRA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 SRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                            </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_compas')">
-                        RC <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 RC <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                            </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_compas')">
-                        PRA <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 PRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                            </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_compas')">
-                        PGU <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                            </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_compas')">
-                        PGI <i class=" fa fa-solid"></i>
+                        <span class="custom-tooltip">
+                                 PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                            </span>
                     </th>
                 </thead>
                 <tbody>
@@ -2099,8 +2349,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.735</td>
                     <td class="aatd">0.986</td>
                     <td class="aatd">0.983</td>
+                    <td class="aatd">0.108</td>                    
                     <td class="aatd">0.107</td>
-                    <td class="aatd">0.108</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
@@ -2112,8 +2362,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.267</td>
                     <td class="aatd">0.469</td>
                     <td class="aatd">0.692</td>
+                    <td class="aatd">0.128</td>                    
                     <td class="aatd">0.087</td>
-                    <td class="aatd">0.128</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
@@ -2125,8 +2375,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.791</td>
                     <td class="aatd">1.</td>
                     <td class="aatd">1.</td>
+                    <td class="aatd">0.109</td>                    
                     <td class="aatd">0.105</td>
-                    <td class="aatd">0.109</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -2138,8 +2388,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.299</td>
                     <td class="aatd">1.</td>
                     <td class="aatd">1.</td>
+                    <td class="aatd">0.148</td>                    
                     <td class="aatd">0.054</td>
-                    <td class="aatd">0.148</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -2151,8 +2401,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.791</td>
                     <td class="aatd">1.</td>
                     <td class="aatd">1.</td>
+                    <td class="aatd">0.109</td>                    
                     <td class="aatd">0.104</td>
-                    <td class="aatd">0.109</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
@@ -2164,8 +2414,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">0.264</td>
                     <td class="aatd">0.535</td>
                     <td class="aatd">0.690</td>
+                    <td class="aatd">0.129</td>                    
                     <td class="aatd">0.086</td>
-                    <td class="aatd">0.129</td>
                 </tr>
                 </tbody>
             </table>
@@ -2179,19 +2429,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_compas')">
-                            RIS <i class=" fa fa-solid"></i>
+                            <span class="custom-tooltip">
+                                 RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_compas')">
-                            ROS <i class=" fa fa-solid"></i>
+                            <span class="custom-tooltip">
+                                 ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_compas')">
-                            RRS <i class=" fa fa-solid"></i>
+                            <span class="custom-tooltip">
+                                 RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                            </span>
                         </th>
                 </thead>
 
@@ -2265,13 +2524,19 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_gmsc')">
-                            PGU <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_gmsc')">
-                            PGI <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -2281,44 +2546,44 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                             <br>
                         </td>
+                        <td class="aatd">0.083</td>                        
                         <td class="aatd">0.181</td>
-                        <td class="aatd">0.083</td>
                     </tr><tr class="even">
                         <!-- <td class="ranktd sorting_1">2</td> -->
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                             <br>
                         </td>
+                        <td class="aatd">0.113</td>                        
                         <td class="aatd">0.153</td>
-                        <td class="aatd">0.113</td>
                     </tr><tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                             <br>
                         </td>
+                        <td class="aatd">0.079</td>                        
                         <td class="aatd">0.183</td>
-                        <td class="aatd">0.079</td>
                     </tr><tr class="even">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                             <br>
                         </td>
+                        <td class="aatd">0.184</td>                        
                         <td class="aatd">0.084</td>
-                        <td class="aatd">0.184</td>
                     </tr><tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                             <br>
                         </td>
+                        <td class="aatd">0.073</td>                        
                         <td class="aatd">0.185</td>
-                        <td class="aatd">0.073</td>
                     </tr><tr class="even">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                             <br>
                         </td>
+                        <td class="aatd">0.107</td>                        
                         <td class="aatd">0.154</td>
-                        <td class="aatd">0.107</td>
                     </tr>
                 </tbody>
             </table>
@@ -2332,19 +2597,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_gmsc')">
-                            RIS <i class="fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_gmsc')">
-                            ROS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_gmsc')">
-                            RRS <i class=" fa fa-solid "></i>
+                            <span class="custom-tooltip">
+                                 RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                            </span>
                         </th>
                         </th>
                     </tr>
@@ -2418,19 +2692,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_gmsc')">
-                            RIS <i class=" fa fa-solid"></i>
+                            <span class="custom-tooltip">
+                                 RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_gmsc')">
-                            ROS <i class=" fa fa-solid"></i>
+                            <span class="custom-tooltip">
+                                 ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                            </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
                             potentially
                             unreliable
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_gmsc')">
-                            RRS <i class=" fa fa-solid"></i>
+                            <span class="custom-tooltip">
+                                 RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                            </span>
                         </th>
                 </thead>
 
@@ -2491,6 +2774,22 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
 
 
 <script>
+
+    function defaultSort() {
+
+        var tables = ["neuralMyTable2", "lr_stab_gmsc", "nn_stab_gmsc", "nn_faith_gmsc", "lr_stab_compas", "lr_faith_compas", "nn_stab_compas", "nn_faith_compas", "lr_stab_synth", "lr_faith_synth", "nn_stab_synth", "nn_faith_synth", "lr_fair_adult", "lr_stab_adult", "lr_faith_adult", "nn_fair_adult", "nn_stab_adult","nn_faith_adult", "lr_stab_heloc", "lr_faith_heloc", "nn_stab_heloc", "nn_faith_heloc", "lr_fair_german", "lr_stab_german", "lr_faith_german", "nn_fair_german", "nn_stab_german"];
+
+        tables.forEach(tableId => {
+            var table = document.getElementById(tableId);
+            // const cols = table.getElementsByTagName("TH");
+            // for (var j = 1; j < cols.length; j++) {
+                var dir = tableId.includes("_fair_") ? "asc" : "desc";
+                sortTable(1, tableId, dir);
+            // }
+        });
+        
+            
+        }
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -2506,7 +2805,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-function sortTable(n, tableId) {
+function sortTable(n, tableId, direction) {
   var table,
     rows,
     switching,
@@ -2520,7 +2819,7 @@ function sortTable(n, tableId) {
 
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "asc";
+  dir = direction || "asc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {

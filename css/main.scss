@@ -266,6 +266,41 @@ table .catd,
   table{border-collapse:collapse;width:100%;margin-bottom:1rem;border-radius:0}table tbody,table tfoot,table thead{border:1px solid #f1f1f1;background-color:#fefefe}table caption{padding:.5rem .625rem .625rem;font-weight:700}table thead{background:#f8f8f8;color:#0a0a0a}table tfoot{background:#f1f1f1;color:#0a0a0a}table tfoot tr,table thead tr{background:0 0}table tfoot td,table tfoot th,table thead td,table thead th{padding:.5rem .625rem .625rem;font-weight:700;text-align:left}table tbody td,table tbody th{padding:.5rem .625rem .625rem}table tbody tr:nth-child(even){border-bottom:0;background-color:#f1f1f1}table.unstriped tbody{background-color:#fefefe}table.unstriped tbody tr{border-bottom:0;border-bottom:1px solid #f1f1f1;background-color:#fefefe}@media screen and (max-width:63.9375em){table.stack thead{display:none}table.stack tfoot{display:none}table.stack td,table.stack th,table.stack tr{display:block}table.stack td{border-top:0}}table.scroll{display:block;width:100%;overflow-x:auto}table.hover thead tr:hover{background-color:#f3f3f3}table.hover tfoot tr:hover{background-color:#ececec}table.hover tbody tr:hover{background-color:#f9f9f9}table.hover:not(.unstriped) tr:nth-of-type(even):hover{background-color:#ececec}.table-scroll{overflow-x:auto}.table-scroll table{width:auto}
 
 
+
+  .custom-tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.custom-tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  right: 175%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.custom-tooltip .align-right {
+  right: 110%;
+}
+
+.custom-tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 /* Teams */
 .columns:not(.is-desktop) {
     display: flex;
