@@ -213,7 +213,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_german')">
                         <span class="custom-tooltip">
                             RIS <i class=" fa fa-solid"></i>
-                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                         </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -222,7 +222,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_german')">
                        <span class="custom-tooltip">
                             ROS <i class=" fa fa-solid"></i>
-                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                         </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -231,22 +231,22 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_german')">
                         <span class="custom-tooltip">
                             RRS <i class=" fa fa-solid"></i>
-                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                         </span>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-
                 <tr class="odd">
                     <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+
                         <br>
                     </td>
-                    <td class="aatd">6.35</td>
-                    <td class="aatd">9.57</td>
-                    <td class="aatd">16.50</td>
-                </tr><tr class="even">
+                    <td class="aatd">0.62</td>
+                    <td class="aatd">2.88</td>
+                    <td class="aatd">6.83</td>
+                </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                         <br>
@@ -254,7 +254,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">1.28</td>
                     <td class="aatd">4.46</td>
                     <td class="aatd">11.46</td>
-                </tr><tr class="odd">
+                </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
@@ -264,29 +264,28 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">11.34</td>
                 </tr><tr class="even">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">2.97</td>
-                    <td class="aatd">6.17</td>
-                    <td class="aatd">13.10</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-
-                        <br>
-                    </td>
-                    <td class="aatd">0.62</td>
-                    <td class="aatd">2.88</td>
-                    <td class="aatd">6.83</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
                     <td class="aatd">-1.90</td>
                     <td class="aatd">1.32</td>
                     <td class="aatd">8.10</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">2.97</td>
+                    <td class="aatd">6.17</td>
+                    <td class="aatd">13.10</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">6.35</td>
+                    <td class="aatd">9.57</td>
+                    <td class="aatd">16.50</td>
                 </tr>
             </tbody>
             </table>
@@ -530,7 +529,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_german')">
                  <span class="custom-tooltip">
                     RIS <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                    <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                 </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
@@ -539,7 +538,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_german')">
                  <span class="custom-tooltip">
                     ROS <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                    <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                 </span>
             </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                 AA eval.
@@ -548,20 +547,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_german')">
                  <span class="custom-tooltip">
                     RRS <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                    <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                 </span>
             </th>
         </thead>
         <tbody>
         <tr class="odd">
-            <td class="methoddt">
-                <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                <br>
-            </td>
-            <td class="aatd">-0.698</td>
-            <td class="aatd">9.397</td>
-            <td class="aatd">9.397</td>
-        </tr><tr class="even">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                 <br>
@@ -569,7 +560,23 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">-0.230</td>
             <td class="aatd">10.056</td>
             <td class="aatd">10.056</td>
+        </tr><tr class="even">
+            <td class="methoddt">
+                <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                <br>
+            </td>
+            <td class="aatd">-0.698</td>
+            <td class="aatd">9.397</td>
+            <td class="aatd">9.397</td>
         </tr><tr class="odd">
+            <td class="methoddt">
+                <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                <br>
+            </td>
+            <td class="aatd">-0.906</td>
+            <td class="aatd">9.437</td>
+            <td class="aatd">9.437</td>
+        </tr><tr class="even">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                 <br>
@@ -577,14 +584,6 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">-1.384</td>
             <td class="aatd">5.241</td>
             <td class="aatd">5.241</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                <br>
-            </td>
-            <td class="aatd">-4.780</td>
-            <td class="aatd">4.931</td>
-            <td class="aatd">4.931</td>
         </tr><tr class="odd">
             <td class="methoddt">
                 <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -595,12 +594,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <td class="aatd">4.560</td>
         </tr><tr class="even">
             <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                 <br>
             </td>
-            <td class="aatd">-0.906</td>
-            <td class="aatd">9.437</td>
-            <td class="aatd">9.437</td>
+            <td class="aatd">-4.780</td>
+            <td class="aatd">4.931</td>
+            <td class="aatd">4.931</td>
         </tr>
         </tbody>
         </table>
@@ -764,7 +763,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_heloc')">
                    <span class="custom-tooltip">
                          RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
@@ -773,7 +772,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_heloc')">
                     <span class="custom-tooltip">
                          ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
@@ -782,7 +781,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_heloc')">
                     <span class="custom-tooltip">
                          RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                 </th>
             </tr>
@@ -806,12 +805,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">9.40</td>
             </tr><tr class="odd">
                 <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                     <br>
                 </td>
-                <td class="aatd">4.06</td>
-                <td class="aatd">5.86</td>
-                <td class="aatd">10.80</td>
+                <td class="aatd">2.46</td>
+                <td class="aatd">4.28</td>
+                <td class="aatd">9.56</td>
             </tr><tr class="even">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -830,12 +829,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">9.53</td>
             </tr><tr class="even">
                 <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                     <br>
                 </td>
-                <td class="aatd">2.46</td>
-                <td class="aatd">4.28</td>
-                <td class="aatd">9.56</td>
+                <td class="aatd">4.06</td>
+                <td class="aatd">5.86</td>
+                <td class="aatd">10.80</td>
             </tr>
             </tbody>
             </table>
@@ -1019,7 +1018,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_heloc')">
                     <span class="custom-tooltip">
                          RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
@@ -1028,7 +1027,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_heloc')">
                     <span class="custom-tooltip">
                          ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                 </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                     AA eval.
@@ -1037,7 +1036,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_heloc')">
                     <span class="custom-tooltip">
                          RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                 </th>
             </tr>
@@ -1045,37 +1044,13 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <tbody>
             <tr class="odd">
                 <td class="methoddt">
-                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                     <br>
                 </td>
-                <td class="aatd">4.534</td>
-                <td class="aatd">8.833</td>
-                <td class="aatd">8.833</td>
+                <td class="aatd">1.036</td>
+                <td class="aatd">8.964</td>
+                <td class="aatd">8.964</td>
             </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                    <br>
-                </td>
-                <td class="aatd">1.458</td>
-                <td class="aatd">9.331</td>
-                <td class="aatd">9.331</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">2.124</td>
-                <td class="aatd">6.336</td>
-                <td class="aatd">6.336</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                    <br>
-                </td>
-                <td class="aatd">-3.724</td>
-                <td class="aatd">3.507</td>
-                <td class="aatd">3.507</td>
-            </tr><tr class="odd">
                 <td class="methoddt">
                     <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                     <br>
@@ -1083,14 +1058,38 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <td class="aatd">1.403</td>
                 <td class="aatd">5.776</td>
                 <td class="aatd">5.776</td>
-            </tr><tr class="even">
+            </tr><tr class="odd">
                 <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                     <br>
                 </td>
-                <td class="aatd">1.036</td>
-                <td class="aatd">8.964</td>
-                <td class="aatd">8.964</td>
+                <td class="aatd">1.458</td>
+                <td class="aatd">9.331</td>
+                <td class="aatd">9.331</td>
+            </tr><tr class="even">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                    <br>
+                </td>
+                <td class="aatd">2.124</td>
+                <td class="aatd">6.336</td>
+                <td class="aatd">6.336</td>
+            </tr><tr class="odd">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                    <br>
+                </td>
+                <td class="aatd">-3.724</td>
+                <td class="aatd">3.507</td>
+                <td class="aatd">3.507</td>
+            </tr><tr class="even">
+                <td class="methoddt">
+                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                    <br>
+                </td>
+                <td class="aatd">4.534</td>
+                <td class="aatd">8.833</td>
+                <td class="aatd">8.833</td>
             </tr>
             </tbody>
             </table>
@@ -1190,7 +1189,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_adult')">
                         <span class="custom-tooltip">
                          RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -1199,7 +1198,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_adult')">
                         <span class="custom-tooltip">
                          ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -1208,7 +1207,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_adult')">
                         <span class="custom-tooltip">
                          RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th>
                 </tr>
@@ -1216,13 +1215,22 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <tbody>
                 <tr class="odd">
                     <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">-1.70</td>
+                    <td class="aatd">-0.95</td>
+                    <td class="aatd">6.22</td>
+                </tr>
+                <tr class="even">
+                    <td class="methoddt">
                         <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                         <br>
                     </td>
                     <td class="aatd">1.79</td>
                     <td class="aatd">2.45</td>
                     <td class="aatd">9.77</td>
-                </tr><tr class="even">
+                </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                         <br>
@@ -1230,22 +1238,14 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">1.98</td>
                     <td class="aatd">2.68</td>
                     <td class="aatd">9.78</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">5.01</td>
-                    <td class="aatd">4.58</td>
-                    <td class="aatd">9.86</td>
                 </tr><tr class="even">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
-                    <td class="aatd">-1.70</td>
-                    <td class="aatd">-0.95</td>
-                    <td class="aatd">6.22</td>
+                    <td class="aatd">3.25</td>
+                    <td class="aatd">3.08</td>
+                    <td class="aatd">8.25</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -1256,12 +1256,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">11.74</td>
                 </tr><tr class="even">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
-                    <td class="aatd">3.25</td>
-                    <td class="aatd">3.08</td>
-                    <td class="aatd">8.25</td>
+                    <td class="aatd">5.01</td>
+                    <td class="aatd">4.58</td>
+                    <td class="aatd">9.86</td>
                 </tr>
             </tbody>
             </table>
@@ -1505,7 +1505,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_adult')">
                         <span class="custom-tooltip">
                          RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -1514,7 +1514,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_adult')">
                         <span class="custom-tooltip">
                          ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -1523,7 +1523,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_adult')">
                         <span class="custom-tooltip">
                          RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th>
                 </tr>
@@ -1548,12 +1548,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">7.883</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
-                    <td class="aatd">4.092</td>
-                    <td class="aatd">6.928</td>
-                    <td class="aatd">6.928</td>
+                    <td class="aatd">2.307</td>
+                    <td class="aatd">7.543</td>
+                    <td class="aatd">7.543</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -1572,12 +1572,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">6.843</td>
                 </tr><tr class="even">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
-                    <td class="aatd">2.307</td>
-                    <td class="aatd">7.543</td>
-                    <td class="aatd">7.543</td>
+                    <td class="aatd">4.092</td>
+                    <td class="aatd">6.928</td>
+                    <td class="aatd">6.928</td>
                 </tr>
             </tbody>
             </table>
@@ -1741,7 +1741,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_synth')">
                         <span class="custom-tooltip">
                          RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -1750,7 +1750,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_synth')">
                         <span class="custom-tooltip">
                          ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
@@ -1759,7 +1759,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_synth')">
                         <span class="custom-tooltip">
                          RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                     </span>
                     </th>
                     </th>
@@ -1768,13 +1768,22 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             <tbody>
                 <tr class="odd">
                     <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">1.11</td>
+                    <td class="aatd">-1.07</td>
+                    <td class="aatd">5.31</td>
+                </tr>
+                <tr class="even">
+                    <td class="methoddt">
                         <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                         <br>
                     </td>
                     <td class="aatd">5.53</td>
                     <td class="aatd">3.40</td>
                     <td class="aatd">9.86</td>
-                </tr><tr class="even">
+                </tr><tr class="odd">
                     <!-- <td class="ranktd sorting_1">2</td> -->
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
@@ -1783,6 +1792,14 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">5.96</td>
                     <td class="aatd">3.95</td>
                     <td class="aatd">10.39</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">6.80</td>
+                    <td class="aatd">3.46</td>
+                    <td class="aatd">7.22</td>
                 </tr><tr class="odd">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
@@ -1793,28 +1810,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">8.02</td>
                 </tr><tr class="even">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">1.11</td>
-                    <td class="aatd">-1.07</td>
-                    <td class="aatd">5.31</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                         <br>
                     </td>
                     <td class="aatd">8.14</td>
                     <td class="aatd">5.53</td>
                     <td class="aatd">11.60</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">6.80</td>
-                    <td class="aatd">3.46</td>
-                    <td class="aatd">7.22</td>
                 </tr>
             </tbody>
             </table>
@@ -2004,7 +2005,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'lr_stab_synth')">
                             <span class="custom-tooltip">
                                  RIS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2013,7 +2014,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_synth')">
                             <span class="custom-tooltip">
                                  ROS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2022,38 +2023,20 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_synth')">
                             <span class="custom-tooltip">
                                  RRS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                <tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                        <br>
-                    </td>
-                    <td class="aatd">9.355</td>
-                    <td class="aatd">13.564</td>
-                    <td class="aatd">13.564</td>
-                    </tr>
-                    <tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    <td class="aatd">5.673</td>
-                    <td class="aatd">8.751</td>
-                    <td class="aatd">8.751</td>
-                    </tr>
                     <tr class="odd">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                         <br>
                     </td>
-                    <td class="aatd">6.133</td>
-                    <td class="aatd">6.144</td>
-                    <td class="aatd">6.144</td>
+                    <td class="aatd">0.405</td>
+                    <td class="aatd">3.422</td>
+                    <td class="aatd">3.422</td>
                     </tr>
                     <tr class="even">
                     <td class="methoddt">
@@ -2066,6 +2049,15 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     </tr>
                     <tr class="odd">
                     <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="aatd">5.673</td>
+                    <td class="aatd">8.751</td>
+                    <td class="aatd">8.751</td>
+                    </tr>
+                    <tr class="even">
+                    <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                         <br>
                     </td>
@@ -2073,14 +2065,23 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                     <td class="aatd">9.022</td>
                     <td class="aatd">9.022</td>
                     </tr>
-                    <tr class="even">
+                    <tr class="odd">
                     <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
-                    <td class="aatd">0.405</td>
-                    <td class="aatd">3.422</td>
-                    <td class="aatd">3.422</td>
+                    <td class="aatd">6.133</td>
+                    <td class="aatd">6.144</td>
+                    <td class="aatd">6.144</td>
+                    </tr>
+                    <tr class="even">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">9.355</td>
+                    <td class="aatd">13.564</td>
+                    <td class="aatd">13.564</td>
                     </tr>
                 </tbody>
             </table>
@@ -2178,7 +2179,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_compas')">
                             <span class="custom-tooltip">
                                  RIS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2187,7 +2188,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_compas')">
                             <span class="custom-tooltip">
                                  ROS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2196,22 +2197,32 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_compas')">
                             <span class="custom-tooltip">
                                  RRS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="odd">
+                    <tr class="even">
                         <td class="methoddt">
-                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                             <br>
                         </td>
-                        <td class="aatd">4.49</td>
-                        <td class="aatd">3.54</td>
-                        <td class="aatd">8.36</td>
-                    </tr><tr class="even">
+                        <td class="aatd">-0.59</td>
+                        <td class="aatd">-1.39</td>
+                        <td class="aatd">3.15</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">3.81</td>
+                        <td class="aatd">3.19</td>
+                        <td class="aatd">7.16</td>
+                    </tr>
+                    <tr class="even">
                         <!-- <td class="ranktd sorting_1">2</td> -->
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
@@ -2220,23 +2231,17 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">4.24</td>
                         <td class="aatd">3.72</td>
                         <td class="aatd">8.27</td>
-                    </tr><tr class="odd">
+                    </tr>
+                    <tr class="odd">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                             <br>
                         </td>
-                        <td class="aatd">6.29</td>
-                        <td class="aatd">5.54</td>
-                        <td class="aatd">9.02</td>
-                    </tr><tr class="even">
-                        <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                            <br>
-                        </td>
-                        <td class="aatd">-0.59</td>
-                        <td class="aatd">-1.39</td>
-                        <td class="aatd">3.15</td>
-                    </tr><tr class="odd">
+                        <td class="aatd">4.49</td>
+                        <td class="aatd">3.54</td>
+                        <td class="aatd">8.36</td>
+                    </tr>
+                    <tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                             <br>
@@ -2244,14 +2249,15 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">5.91</td>
                         <td class="aatd">5.29</td>
                         <td class="aatd">9.27</td>
-                    </tr><tr class="even">
+                    </tr>
+                    <tr class="odd">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                             <br>
                         </td>
-                        <td class="aatd">3.81</td>
-                        <td class="aatd">3.19</td>
-                        <td class="aatd">7.16</td>
+                        <td class="aatd">6.29</td>
+                        <td class="aatd">5.54</td>
+                        <td class="aatd">9.02</td>
                     </tr>
                 </tbody>
             </table>
@@ -2431,7 +2437,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_compas')">
                             <span class="custom-tooltip">
                                  RIS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2440,7 +2446,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_compas')">
                             <span class="custom-tooltip">
                                  ROS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2449,7 +2455,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_compas')">
                             <span class="custom-tooltip">
                                  RRS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th>
                 </thead>
@@ -2457,13 +2463,22 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 <tbody>
                     <tr class="odd">
                         <td class="methoddt">
-                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                             <br>
                         </td>
-                        <td class="aatd">4.24</td>
-                        <td class="aatd">2.28</td>
-                        <td class="aatd">2.28</td>
+                        <td class="aatd">-1.10</td>
+                        <td class="aatd">-2.93</td>
+                        <td class="aatd">-2.93</td>
                     </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">2.98</td>
+                        <td class="aatd">1.78</td>
+                        <td class="aatd">1.78</td>
+                    </tr>
+                    <tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                             <br>
@@ -2471,22 +2486,14 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">3.12</td>
                         <td class="aatd">2.35</td>
                         <td class="aatd">2.35</td>
-                    </tr><tr class="odd">
-                        <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                            <br>
-                        </td>
-                        <td class="aatd">4.77</td>
-                        <td class="aatd">1.82</td>
-                        <td class="aatd">1.82</td>
                     </tr><tr class="even">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                             <br>
                         </td>
-                        <td class="aatd">-1.10</td>
-                        <td class="aatd">-2.93</td>
-                        <td class="aatd">-2.93</td>
+                        <td class="aatd">4.24</td>
+                        <td class="aatd">2.28</td>
+                        <td class="aatd">2.28</td>
                     </tr><tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -2497,12 +2504,12 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">1.41</td>
                     </tr><tr class="even">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                             <br>
                         </td>
-                        <td class="aatd">2.98</td>
-                        <td class="aatd">1.78</td>
-                        <td class="aatd">1.78</td>
+                        <td class="aatd">4.77</td>
+                        <td class="aatd">1.82</td>
+                        <td class="aatd">1.82</td>
                     </tr>
                 </tbody>
             </table>
@@ -2599,7 +2606,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_gmsc')">
                             <span class="custom-tooltip">
                                  RIS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2608,7 +2615,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_gmsc')">
                             <span class="custom-tooltip">
                                  ROS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2617,7 +2624,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                             : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_gmsc')">
                             <span class="custom-tooltip">
                                  RRS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th>
                         </th>
@@ -2641,14 +2648,14 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">1.27</td>
                         <td class="aatd">3.06</td>
                         <td class="aatd">6.93</td>
-                    </tr><tr class="odd">
+                    </tr><tr class="even">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                             <br>
                         </td>
-                        <td class="aatd">3.91</td>
-                        <td class="aatd">5.63</td>
-                        <td class="aatd">8.46</td>
+                        <td class="aatd">1.89</td>
+                        <td class="aatd">3.54</td>
+                        <td class="aatd">6.67</td>
                     </tr><tr class="even">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
@@ -2665,14 +2672,14 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">3.07</td>
                         <td class="aatd">4.76</td>
                         <td class="aatd">7.82</td>
-                    </tr><tr class="even">
+                    </tr><tr class="odd">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                             <br>
                         </td>
-                        <td class="aatd">1.89</td>
-                        <td class="aatd">3.54</td>
-                        <td class="aatd">6.67</td>
+                        <td class="aatd">3.91</td>
+                        <td class="aatd">5.63</td>
+                        <td class="aatd">8.46</td>
                     </tr>
                 </tbody>
             </table>
@@ -2694,7 +2701,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_gmsc')">
                             <span class="custom-tooltip">
                                  RIS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2703,7 +2710,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_gmsc')">
                             <span class="custom-tooltip">
                                  ROS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better.</span>
+                                <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                             AA eval.
@@ -2712,21 +2719,13 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_gmsc')">
                             <span class="custom-tooltip">
                                  RRS <i class=" fa fa-solid"></i>
-                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better.</span>
+                                <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
                             </span>
                         </th>
                 </thead>
 
                 <tbody>
-                    <tr class="odd">
-                        <td class="methoddt">
-                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                            <br>
-                        </td>
-                        <td class="aatd">2.56</td>
-                        <td class="aatd">1.81</td>
-                        <td class="aatd">1.81</td>
-                    </tr><tr class="even">
+                    <tr class="even">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                             <br>
@@ -2734,22 +2733,22 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">1.44</td>
                         <td class="aatd">0.09</td>
                         <td class="aatd">0.09</td>
-                    </tr><tr class="odd">
-                        <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                            <br>
-                        </td>
-                        <td class="aatd">3.96</td>
-                        <td class="aatd">1.38</td>
-                        <td class="aatd">1.38</td>
                     </tr><tr class="even">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
                             <br>
                         </td>
-                        <td class="aatd">-3.20</td>
-                        <td class="aatd">-3.56</td>
-                        <td class="aatd">-3.56</td>
+                        <td class="aatd">2.06</td>
+                        <td class="aatd">0.15</td>
+                        <td class="aatd">0.15</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">2.56</td>
+                        <td class="aatd">1.81</td>
+                        <td class="aatd">1.81</td>
                     </tr><tr class="odd">
                         <td class="methoddt">
                             <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
@@ -2760,12 +2759,20 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <td class="aatd">0.59</td>
                     </tr><tr class="even">
                         <td class="methoddt">
-                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                             <br>
                         </td>
-                        <td class="aatd">2.06</td>
-                        <td class="aatd">0.15</td>
-                        <td class="aatd">0.15</td>
+                        <td class="aatd">-3.20</td>
+                        <td class="aatd">-3.56</td>
+                        <td class="aatd">-3.56</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">3.96</td>
+                        <td class="aatd">1.38</td>
+                        <td class="aatd">1.38</td>
                     </tr>
                 </tbody>
             </table>
@@ -2777,7 +2784,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
 
     function defaultSort() {
 
-        var tables = ["neuralMyTable2", "lr_stab_gmsc", "nn_stab_gmsc", "nn_faith_gmsc", "lr_stab_compas", "lr_faith_compas", "nn_stab_compas", "nn_faith_compas", "lr_stab_synth", "lr_faith_synth", "nn_stab_synth", "nn_faith_synth", "lr_fair_adult", "lr_stab_adult", "lr_faith_adult", "nn_fair_adult", "nn_stab_adult","nn_faith_adult", "lr_stab_heloc", "lr_faith_heloc", "nn_stab_heloc", "nn_faith_heloc", "lr_fair_german", "lr_stab_german", "lr_faith_german", "nn_fair_german", "nn_stab_german"];
+        var tables = ["neuralMyTable2", "nn_faith_gmsc", "lr_faith_compas", "nn_faith_compas", "lr_faith_synth", "nn_faith_synth", "lr_fair_adult", "lr_faith_adult", "nn_fair_adult","nn_faith_adult", "lr_faith_heloc", "nn_faith_heloc", "lr_fair_german", "lr_faith_german", "nn_fair_german"];
 
         tables.forEach(tableId => {
             var table = document.getElementById(tableId);
