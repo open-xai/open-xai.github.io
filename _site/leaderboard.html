@@ -2689,6 +2689,165 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
 
         <button class="collapsible sub-collapse"> Logistic Regression Model</button>
         <div class="collapsible-content">
+            <h4>Faithfulness</h4>
+            <table id="lr_faith_gmsc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Standard
+                        accuracy
+                    : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 FA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                            </span>
+                    </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AutoAttack
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 RA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                            </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Best known
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 SA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better.</span>
+                            </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 SRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                            </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 RC <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                            </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 PRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                            </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                            </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_gmsc')">
+                        <span class="custom-tooltip">
+                                 PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
+                    </th>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.828</td>
+                    <td class="aatd">0.585</td>
+                    <td class="aatd">0.828</td>
+                    <td class="aatd">0.576</td>
+                    <td class="aa-extd">0.926</td>
+                    <td class="aatd">0.911</td>
+                    <td class="aatd">0.060</td>
+                    <td class="aatd">0.264</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.530</td>
+                    <td class="aatd">0.155</td>
+                    <td class="aatd">0.462</td>
+                    <td class="aatd">0.143</td>
+                    <td class="aa-extd">0.156</td>
+                    <td class="aatd">0.556</td>
+                    <td class="aatd">0.113</td>
+                    <td class="aatd">0.225</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.900</td>
+                    <td class="aatd">0.900</td>
+                    <td class="aatd">0.886</td>
+                    <td class="aatd">0.886</td>
+                    <td class="aa-extd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.066</td>
+                    <td class="aatd">0.259</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.900</td>
+                    <td class="aatd">0.900</td>
+                    <td class="aatd">0.369</td>
+                    <td class="aatd">0.369</td>
+                    <td class="aa-extd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.277</td>
+                    <td class="aatd">0.056</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.900</td>
+                    <td class="aatd">0.900</td>
+                    <td class="aatd">0.886</td>
+                    <td class="aatd">0.886</td>
+                    <td class="aa-extd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.066</td>
+                    <td class="aatd">0.259</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.553</td>
+                    <td class="aatd">0.144</td>
+                    <td class="aatd">0.455</td>
+                    <td class="aatd">0.138</td>
+                    <td class="aa-extd">0.233</td>
+                    <td class="aatd">0.562</td>
+                    <td class="aatd">0.098</td>
+                    <td class="aatd">0.232</td>
+                </tr>
+                </tbody>
+            </table>
 
             <h4> Stability</h4>
             <table id="lr_stab_gmsc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
@@ -2784,7 +2943,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
 
     function defaultSort() {
 
-        var tables = ["neuralMyTable2", "nn_faith_gmsc", "lr_faith_compas", "nn_faith_compas", "lr_faith_synth", "nn_faith_synth", "lr_fair_adult", "lr_faith_adult", "nn_fair_adult","nn_faith_adult", "lr_faith_heloc", "nn_faith_heloc", "lr_fair_german", "lr_faith_german", "nn_fair_german"];
+        var tables = ["neuralMyTable2", "nn_faith_gmsc", "lr_faith_compas", "nn_faith_compas", "lr_faith_synth", "nn_faith_synth", "lr_fair_adult", "lr_faith_adult", "nn_fair_adult","nn_faith_adult", "lr_faith_heloc", "nn_faith_heloc", "lr_fair_german", "lr_faith_german", "nn_fair_german", "lr_faith_gmsc"];
 
         tables.forEach(tableId => {
             var table = document.getElementById(tableId);
