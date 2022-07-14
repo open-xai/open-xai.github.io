@@ -300,56 +300,116 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         unreliable
                     : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'nn_fair_german')">
                         <span class="custom-tooltip">
+                            Fairness@PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in PGI scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(2, 'nn_fair_german')">
+                        <span class="custom-tooltip">
                             Fairness@PGU <i class=" fa fa-solid"></i>
                             <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
                         </span>
                     </th>
-                    
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_fair_german')">
+                        <span class="custom-tooltip">
+                            Fairness@RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in RIS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(4, 'nn_fair_german')">
+                        <span class="custom-tooltip">
+                            Fairness@ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in ROS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(5, 'nn_fair_german')">
+                        <span class="custom-tooltip">
+                            Fairness@RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in RRS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
-
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.001</td>
+                    <td class="aatd">0.056</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
+                <tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.009</td>
+                    <td class="aatd">0.056</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.035</td>
+                    <td class="aatd">0.085</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
+                <tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.045</td>
+                    <td class="aatd">0.079</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.102</td>
+                    <td class="aatd">0.009</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
                 <tr class="odd">
                     <td class="methoddt">
                         <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
                         <br>
                     </td>
-                    <td class="aatd">0.089</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.041</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.058</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.027</td>
-                    
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-
-                        <br>
-                    </td>
-                    <td class="aatd">0.05</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.012</td>
-                    
+                    <td class="aatd">0.138</td>
+                    <td class="aatd">0.095</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
                 </tr>
             </tbody>
             </table>
@@ -358,322 +418,476 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
         <button class="collapsible sub-collapse"> Logistic Regression Model</button>
         <div class="collapsible-content">
             <h4> Faithfulness</h4>
-      <table id="lr_faith_german" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-        <thead>
-        <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-            <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                Standard
-                accuracy
-            : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_german')">
-                <span class="custom-tooltip">
-                     FA <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
-                </span>
-            </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AutoAttack
-                robust
-                accuracy
-            : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_german')">
-                <span class="custom-tooltip">
-                    RA <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                Best known
-                robust
-                accuracy
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_german')">
-                 <span class="custom-tooltip">
-                    SA <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_german')">
-                 <span class="custom-tooltip">
-                    SRA <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_german')">
-                 <span class="custom-tooltip">
-                    RC <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_german')">
-                 <span class="custom-tooltip">
-                    PRA <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_german')">
-                 <span class="custom-tooltip">
-                    PGI <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
-                </span>
-            </th>
-            <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_german')">
-                 <span class="custom-tooltip">
-                    PGU <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
-                </span>
-            </th>
-        </thead>
-        <tbody>
-        <tr class="odd">
-            <td class="methoddt">
-                <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                <br>
-            </td>
-            <td class="catd">0.938</td>
-            <td class="aatd">0.810</td>
-            <td class="aa-extd">0.938</td>
-            <td class="aatd">0.814</td>
-            <td class="aatd">0.998</td>
-            <td class="aatd">0.989</td>
-            <td class="aatd">0.156</td>            
-            <td class="aatd">0.169</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                <br>
-            </td>
-            <td class="catd">0.130</td>
-            <td class="aatd">0.007</td>
-            <td class="aa-extd">0.112</td>
-            <td class="aatd">0.006</td>
-            <td class="aatd">-0.053</td>
-            <td class="aatd">0.488</td>
-            <td class="aatd">0.135</td>            
-            <td class="aatd">0.180</td>
-        </tr><tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                <br>
-            </td>
-            <td class="catd">0.950</td>
-            <td class="aatd">0.950</td>
-            <td class="aa-extd">0.846</td>
-            <td class="aatd">0.846</td>
-            <td class="aatd">1.000</td>
-            <td class="aatd">1.000</td>
-            <td class="aatd">0.149</td>            
-            <td class="aatd">0.174</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                <br>
-            </td>
-            <td class="catd">0.950</td>
-            <td class="aatd">0.950</td>
-            <td class="aa-extd">0.606</td>
-            <td class="aatd">0.606</td>
-            <td class="aatd">1.000</td>
-            <td class="aatd">1.000</td>
-            <td class="aatd">0.202</td>            
-            <td class="aatd">0.124</td>
-        </tr><tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                <br>
-            </td>
-            <td class="catd">0.950</td>
-            <td class="aatd">0.950</td>
-            <td class="aa-extd">0.846</td>
-            <td class="aatd">0.846</td>
-            <td class="aatd">1.000</td>
-            <td class="aatd">1.000</td>
-            <td class="aatd">0.148</td>
-            <td class="aatd">0.173</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                <br>
-            </td>
-            <td class="catd">0.785</td>
-            <td class="aatd">0.161</td>
-            <td class="aa-extd">0.382</td>
-            <td class="aatd">0.071</td>
-            <td class="aatd">0.890</td>
-            <td class="aatd">0.875</td>
-            <td class="aatd">0.171</td>            
-            <td class="aatd">0.161</td>
-        </tr>
-        </tbody>
-        </table>
+            <table id="lr_faith_german" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Standard
+                        accuracy
+                    : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_german')">
+                        <span class="custom-tooltip">
+                             FA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                        </span>
+                    </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AutoAttack
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_german')">
+                        <span class="custom-tooltip">
+                            RA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Best known
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_german')">
+                         <span class="custom-tooltip">
+                            SA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_german')">
+                         <span class="custom-tooltip">
+                            SRA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_german')">
+                         <span class="custom-tooltip">
+                            RC <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_german')">
+                         <span class="custom-tooltip">
+                            PRA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_german')">
+                         <span class="custom-tooltip">
+                            PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_german')">
+                         <span class="custom-tooltip">
+                            PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
+                    </th>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.938</td>
+                    <td class="aatd">0.810</td>
+                    <td class="aa-extd">0.938</td>
+                    <td class="aatd">0.814</td>
+                    <td class="aatd">0.998</td>
+                    <td class="aatd">0.989</td>
+                    <td class="aatd">0.156</td>            
+                    <td class="aatd">0.169</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.130</td>
+                    <td class="aatd">0.007</td>
+                    <td class="aa-extd">0.112</td>
+                    <td class="aatd">0.006</td>
+                    <td class="aatd">-0.053</td>
+                    <td class="aatd">0.488</td>
+                    <td class="aatd">0.135</td>            
+                    <td class="aatd">0.180</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.950</td>
+                    <td class="aatd">0.950</td>
+                    <td class="aa-extd">0.846</td>
+                    <td class="aatd">0.846</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.149</td>            
+                    <td class="aatd">0.174</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.950</td>
+                    <td class="aatd">0.950</td>
+                    <td class="aa-extd">0.606</td>
+                    <td class="aatd">0.606</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.202</td>            
+                    <td class="aatd">0.124</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.950</td>
+                    <td class="aatd">0.950</td>
+                    <td class="aa-extd">0.846</td>
+                    <td class="aatd">0.846</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.148</td>
+                    <td class="aatd">0.173</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.785</td>
+                    <td class="aatd">0.161</td>
+                    <td class="aa-extd">0.382</td>
+                    <td class="aatd">0.071</td>
+                    <td class="aatd">0.890</td>
+                    <td class="aatd">0.875</td>
+                    <td class="aatd">0.171</td>            
+                    <td class="aatd">0.161</td>
+                </tr>
+                </tbody>
+                </table>
 
             <h4> Stability</h4>
-      <table id="lr_stab_german" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-        <thead>
-        <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-            <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_german')">
-                 <span class="custom-tooltip">
-                    RIS <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_german')">
-                 <span class="custom-tooltip">
-                    ROS <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
-                </span>
-            </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_german')">
-                 <span class="custom-tooltip">
-                    RRS <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
-                </span>
-            </th>
-        </thead>
-        <tbody>
-        <tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                <br>
-            </td>
-            <td class="aatd">-0.230</td>
-            <td class="aatd">10.056</td>
-            <td class="aatd">10.056</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                <br>
-            </td>
-            <td class="aatd">-0.698</td>
-            <td class="aatd">9.397</td>
-            <td class="aatd">9.397</td>
-        </tr><tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                <br>
-            </td>
-            <td class="aatd">-0.906</td>
-            <td class="aatd">9.437</td>
-            <td class="aatd">9.437</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                <br>
-            </td>
-            <td class="aatd">-1.384</td>
-            <td class="aatd">5.241</td>
-            <td class="aatd">5.241</td>
-        </tr><tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                <br>
-            </td>
-            <td class="aatd">-2.004</td>
-            <td class="aatd">4.560</td>
-            <td class="aatd">4.560</td>
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                <br>
-            </td>
-            <td class="aatd">-4.780</td>
-            <td class="aatd">4.931</td>
-            <td class="aatd">4.931</td>
-        </tr>
-        </tbody>
-        </table>
+            <table id="lr_stab_german" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+            <thead>
+            <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                    AA eval.
+                    potentially
+                    unreliable
+                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_german')">
+                     <span class="custom-tooltip">
+                        RIS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
+                    </span>
+                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                    AA eval.
+                    potentially
+                    unreliable
+                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_german')">
+                     <span class="custom-tooltip">
+                        ROS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
+                    </span>
+                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                    AA eval.
+                    potentially
+                    unreliable
+                : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_german')">
+                     <span class="custom-tooltip">
+                        RRS <i class=" fa fa-solid"></i>
+                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
+                    </span>
+                </th>
+            </thead>
+            <tbody>
+            <tr class="odd">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                    <br>
+                </td>
+                <td class="aatd">-0.230</td>
+                <td class="aatd">10.056</td>
+                <td class="aatd">10.056</td>
+            </tr><tr class="even">
+                <td class="methoddt">
+                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                    <br>
+                </td>
+                <td class="aatd">-0.698</td>
+                <td class="aatd">9.397</td>
+                <td class="aatd">9.397</td>
+            </tr><tr class="odd">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                    <br>
+                </td>
+                <td class="aatd">-0.906</td>
+                <td class="aatd">9.437</td>
+                <td class="aatd">9.437</td>
+            </tr><tr class="even">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                    <br>
+                </td>
+                <td class="aatd">-1.384</td>
+                <td class="aatd">5.241</td>
+                <td class="aatd">5.241</td>
+            </tr><tr class="odd">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                    <br>
+                </td>
+                <td class="aatd">-2.004</td>
+                <td class="aatd">4.560</td>
+                <td class="aatd">4.560</td>
+            </tr><tr class="even">
+                <td class="methoddt">
+                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                    <br>
+                </td>
+                <td class="aatd">-4.780</td>
+                <td class="aatd">4.931</td>
+                <td class="aatd">4.931</td>
+            </tr>
+            </tbody>
+            </table>
 
             <h4> Fairness</h4>
-      <table id="lr_fair_german" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-        <thead>
-        <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-            <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                AA eval.
-                potentially
-                unreliable
-            : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(7, 'lr_fair_german')">
-                 <span class="custom-tooltip">
-                    Fairness@PGU <i class=" fa fa-solid"></i>
-                    <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
-                </span>
-            </th>
-        </thead>
-        <tbody>
-        <tr class="odd">
-            <td class="methoddt">
-                <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                <br>
-            </td>
-            
-            <td class="aatd">0.013</td>
-            
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                <br>
-            </td>
-           
-            <td class="aatd">0.039</td>
-            
-        </tr><tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                <br>
-            </td>
-           
-            <td class="aatd">0.120</td>
-            
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                <br>
-            </td>
-            
-            <td class="aatd">0.013</td>
-           
-        </tr><tr class="odd">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                <br>
-            </td>
-            
-            <td class="aatd">0.120</td>
-           
-            <!-- <td class="venuetd">ICML'2017</td> -->
-        </tr><tr class="even">
-            <td class="methoddt">
-                <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                <br>
-            </td>
-           
-            <td class="aatd">0.038</td>
-            
-        </tr>
-        </tbody>
-        </table>
+            <table id="lr_fair_german" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                    <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@FA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in FA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(2, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@RA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@SA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in SA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(4, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@SRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in SRA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(5, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@RC <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RC scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(6, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@PRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PRA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(7, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PGI scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(8, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(9, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RIS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(10, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in ROS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'lr_fair_german')">
+                            <span class="custom-tooltip">
+                                Fairness@RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RRS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.018</td>
+                        <td class="aatd">0.014</td>
+                        <td class="aatd">0.011</td>
+                        <td class="aatd">0.014</td>
+                        <td class="aatd">0.005</td>
+                        <td class="aatd">0.006</td>
+                        <td class="aatd">0.045</td>
+                        <td class="aatd">0.028</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.019</td>
+                        <td class="aatd">0.014</td>
+                        <td class="aatd">0.142</td>
+                        <td class="aatd">0.081</td>
+                        <td class="aatd">0.053</td>
+                        <td class="aatd">0.064</td>
+                        <td class="aatd">0.016</td>                    
+                        <td class="aatd">0.029</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.021</td>
+                        <td class="aatd">0.016</td>
+                        <td class="aatd">0.141</td>
+                        <td class="aatd">0.080</td>
+                        <td class="aatd">0.053</td>
+                        <td class="aatd">0.064</td>
+                        <td class="aatd">0.010</td>                    
+                        <td class="aatd">0.032</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.027</td>
+                        <td class="aatd">0.017</td>
+                        <td class="aatd">0.014</td>
+                        <td class="aatd">0.016</td>
+                        <td class="aatd">0.011</td>
+                        <td class="aatd">0.012</td>
+                        <td class="aatd">0.056</td>                    
+                        <td class="aatd">0.051</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.050</td>
+                        <td class="aatd">0.039</td>
+                        <td class="aatd">0.038</td>
+                        <td class="aatd">0.039</td>
+                        <td class="aatd">0.016</td>
+                        <td class="aatd">0.020</td>
+                        <td class="aatd">0.012</td>                    
+                        <td class="aatd">0.017</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.057</td>
+                        <td class="aatd">0.044</td>
+                        <td class="aatd">0.042</td>
+                        <td class="aatd">0.044</td>
+                        <td class="aatd">0.017</td>
+                        <td class="aatd">0.022</td>
+                        <td class="aatd">0.012</td>                    
+                        <td class="aatd">0.028</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
 <button class="collapsible">Home Equity Line of Credit (HELOC)</button>
     <div class="collapsible-content">
@@ -681,162 +895,162 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
         <div class="collapsible-content">
             <h4> Faithfulness </h4>
             <table id="nn_faith_heloc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-            <thead>
-            <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_heloc')">
-                     <span class="custom-tooltip">
-                         PGI <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
-                    </span>
-                </th>
-                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_heloc')">
-                    <span class="custom-tooltip">
-                         PGU <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
-                    </span>
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="odd">
-                <td class="methoddt">
-                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                    <br>
-                </td>
-                <td class="aatd">0.26</td>                
-                <td class="aatd">0.24</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                    <br>
-                </td>
-                <td class="aatd">0.26</td>                
-                <td class="aatd">0.23</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">0.24</td>                
-                <td class="aatd">0.26</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                    <br>
-                </td>
-                <td class="aatd">0.33</td>                
-                <td class="aatd">0.13</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">0.24</td>                
-                <td class="aatd">0.26</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                    <br>
-                </td>
-                <td class="aatd">0.25</td>                
-                <td class="aatd">0.23</td>
-            </tr>
-            </tbody>
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_heloc')">
+                         <span class="custom-tooltip">
+                             PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_heloc')">
+                        <span class="custom-tooltip">
+                             PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.26</td>                
+                    <td class="aatd">0.24</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.26</td>                
+                    <td class="aatd">0.23</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.24</td>                
+                    <td class="aatd">0.26</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.33</td>                
+                    <td class="aatd">0.13</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.24</td>                
+                    <td class="aatd">0.26</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.25</td>                
+                    <td class="aatd">0.23</td>
+                </tr>
+                </tbody>
             </table>
 
             <h4> Stability </h4>
             <table id="nn_stab_heloc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-            <thead>
-            <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_heloc')">
-                   <span class="custom-tooltip">
-                         RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_heloc')">
-                    <span class="custom-tooltip">
-                         ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_heloc')">
-                    <span class="custom-tooltip">
-                         RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="odd">
-                <td class="methoddt">
-                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                    <br>
-                </td>
-                <td class="aatd">1.19</td>
-                <td class="aatd">3.33</td>
-                <td class="aatd">13.25</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                    <br>
-                </td>
-                <td class="aatd">1.57</td>
-                <td class="aatd">3.80</td>
-                <td class="aatd">9.40</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                    <br>
-                </td>
-                <td class="aatd">2.46</td>
-                <td class="aatd">4.28</td>
-                <td class="aatd">9.56</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                    <br>
-                </td>
-                <td class="aatd">-3.11</td>
-                <td class="aatd">-0.95</td>
-                <td class="aatd">4.60</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">3.16</td>
-                <td class="aatd">5.17</td>
-                <td class="aatd">9.53</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">4.06</td>
-                <td class="aatd">5.86</td>
-                <td class="aatd">10.80</td>
-            </tr>
-            </tbody>
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_heloc')">
+                       <span class="custom-tooltip">
+                             RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_heloc')">
+                        <span class="custom-tooltip">
+                             ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_heloc')">
+                        <span class="custom-tooltip">
+                             RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">1.19</td>
+                    <td class="aatd">3.33</td>
+                    <td class="aatd">13.25</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="aatd">1.57</td>
+                    <td class="aatd">3.80</td>
+                    <td class="aatd">9.40</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">2.46</td>
+                    <td class="aatd">4.28</td>
+                    <td class="aatd">9.56</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">-3.11</td>
+                    <td class="aatd">-0.95</td>
+                    <td class="aatd">4.60</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">3.16</td>
+                    <td class="aatd">5.17</td>
+                    <td class="aatd">9.53</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">4.06</td>
+                    <td class="aatd">5.86</td>
+                    <td class="aatd">10.80</td>
+                </tr>
+                </tbody>
             </table>
 
             <h4> Fairness </h4>
@@ -846,256 +1060,256 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
         <button class="collapsible sub-collapse"> Logistic Regression Model</button>
         <div class="collapsible-content">
             <h4> Faithfulness </h4>
-          <table id="lr_faith_heloc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-            <thead>
-            <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    Standard
-                    accuracy
-                : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         FA <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
-                    </span>
-                </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AutoAttack
-                    robust
-                    accuracy
-                : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         RA <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    Best known
-                    robust
-                    accuracy
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         SA <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         SRA <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         RC <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         PRA <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         PGI <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
-                    </span>
-                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_heloc')">
-                    <span class="custom-tooltip">
-                         PGU <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
-                    </span>
-                </th>   
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="odd">
-                <td class="methoddt">
-                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                    <br>
-                </td>
-                <td class="catd">0.932</td>
-                <td class="aatd">0.671</td>
-                <td class="aa-extd">0.929</td>
-                <td class="aatd">0.670</td>
-                <td class="aatd">0.994</td>
-                <td class="aatd">0.982</td>
-                <td class="aatd">0.156</td>                
-                <td class="aatd">0.104</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                    <br>
-                </td>
-                <td class="catd">0.586</td>
-                <td class="aatd">0.054</td>
-                <td class="aa-extd">0.269</td>
-                <td class="aatd">0.024</td>
-                <td class="aatd">0.384</td>
-                <td class="aatd">0.645</td>
-                <td class="aatd">0.121</td>                
-                <td class="aatd">0.136</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                    <br>
-                </td>
-                <td class="catd">0.957</td>
-                <td class="aatd">0.957</td>
-                <td class="aa-extd">0.469</td>
-                <td class="aatd">0.469</td>
-                <td class="aatd">1.000</td>
-                <td class="aatd">1.000</td>
-                <td class="aatd">0.129</td>                
-                <td class="aatd">0.131</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                    <br>
-                </td>
-                <td class="catd">0.957</td>
-                <td class="aatd">0.957</td>
-                <td class="aa-extd">0.274</td>
-                <td class="aatd">0.274</td>
-                <td class="aatd">1.000</td>
-                <td class="aatd">1.000</td>
-                <td class="aatd">0.054</td>                
-                <td class="aatd">0.177</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                    <br>
-                </td>
-                <td class="catd">0.957</td>
-                <td class="aatd">0.957</td>
-                <td class="aa-extd">0.469</td>
-                <td class="aatd">0.469</td>
-                <td class="aatd">1.000</td>
-                <td class="aatd">1.000</td>
-                <td class="aatd">0.127</td>                
-                <td class="aatd">0.132</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                    <br>
-                </td>
-                <td class="catd">0.582</td>
-                <td class="aatd">0.049</td>
-                <td class="aa-extd">0.255</td>
-                <td class="aatd">0.022</td>
-                <td class="aatd">0.390</td>
-                <td class="aatd">0.641</td>
-                <td class="aatd">0.123</td>                
-                <td class="aatd">0.135</td>
-            </tr>
-            </tbody>
+            <table id="lr_faith_heloc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="ca sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Standard
+                        accuracy
+                    : activate to sort column ascending" style="width: 42px; cursor:pointer" onclick="sortTable(1, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             FA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">FA computes the fraction of top-K features that are common between a given post hoc explanation and the corresponding ground truth explanation. Higher values are better.</span>
+                        </span>
+                    </th><th class="aa sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AutoAttack
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 43px; cursor:pointer" onclick="sortTable(2, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             RA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RA measures the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also have the same position in the respective rank orders. Higher values are better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        Best known
+                        robust
+                        accuracy
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(3, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             SA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">SA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same sign in both the explanations. Higher values are better</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(4, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             SRA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">SRA computes the fraction of top-K features that are not only common between a given explanation and the corresponding ground truth explanation, but also share the same feature attribution sign and rank in both the explanations. Higher values the better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(5, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             RC <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RC computes the Spearman’s rank correlation coefficient to measure the agreement between feature rankings provided by a given explanation and the corresponding ground truth explanation. Higher values the better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(6, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             PRA <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PRA captures if the relative ordering of every pair of features is the same for a given explanation as well as the corresponding ground truth explanation and computes the fraction of feature pairs for which the relative ordering is the same between the two explanations. Higher values the better.</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                        </span>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(8, 'lr_faith_heloc')">
+                        <span class="custom-tooltip">
+                             PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
+                    </th>   
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.932</td>
+                    <td class="aatd">0.671</td>
+                    <td class="aa-extd">0.929</td>
+                    <td class="aatd">0.670</td>
+                    <td class="aatd">0.994</td>
+                    <td class="aatd">0.982</td>
+                    <td class="aatd">0.156</td>                
+                    <td class="aatd">0.104</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.586</td>
+                    <td class="aatd">0.054</td>
+                    <td class="aa-extd">0.269</td>
+                    <td class="aatd">0.024</td>
+                    <td class="aatd">0.384</td>
+                    <td class="aatd">0.645</td>
+                    <td class="aatd">0.121</td>                
+                    <td class="aatd">0.136</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.957</td>
+                    <td class="aatd">0.957</td>
+                    <td class="aa-extd">0.469</td>
+                    <td class="aatd">0.469</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.129</td>                
+                    <td class="aatd">0.131</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.957</td>
+                    <td class="aatd">0.957</td>
+                    <td class="aa-extd">0.274</td>
+                    <td class="aatd">0.274</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.054</td>                
+                    <td class="aatd">0.177</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.957</td>
+                    <td class="aatd">0.957</td>
+                    <td class="aa-extd">0.469</td>
+                    <td class="aatd">0.469</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">1.000</td>
+                    <td class="aatd">0.127</td>                
+                    <td class="aatd">0.132</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="catd">0.582</td>
+                    <td class="aatd">0.049</td>
+                    <td class="aa-extd">0.255</td>
+                    <td class="aatd">0.022</td>
+                    <td class="aatd">0.390</td>
+                    <td class="aatd">0.641</td>
+                    <td class="aatd">0.123</td>                
+                    <td class="aatd">0.135</td>
+                </tr>
+                </tbody>
             </table>
 
             <h4> Stability </h4>
-          <table id="lr_stab_heloc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-            <thead>
-            <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-            <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_heloc')">
-                    <span class="custom-tooltip">
-                         RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_heloc')">
-                    <span class="custom-tooltip">
-                         ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                    AA eval.
-                    potentially
-                    unreliable
-                : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_heloc')">
-                    <span class="custom-tooltip">
-                         RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                    <br>
-                </td>
-                <td class="aatd">1.036</td>
-                <td class="aatd">8.964</td>
-                <td class="aatd">8.964</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">1.403</td>
-                <td class="aatd">5.776</td>
-                <td class="aatd">5.776</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                    <br>
-                </td>
-                <td class="aatd">1.458</td>
-                <td class="aatd">9.331</td>
-                <td class="aatd">9.331</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                    <br>
-                </td>
-                <td class="aatd">2.124</td>
-                <td class="aatd">6.336</td>
-                <td class="aatd">6.336</td>
-            </tr><tr class="odd">
-                <td class="methoddt">
-                    <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                    <br>
-                </td>
-                <td class="aatd">-3.724</td>
-                <td class="aatd">3.507</td>
-                <td class="aatd">3.507</td>
-            </tr><tr class="even">
-                <td class="methoddt">
-                    <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                    <br>
-                </td>
-                <td class="aatd">4.534</td>
-                <td class="aatd">8.833</td>
-                <td class="aatd">8.833</td>
-            </tr>
-            </tbody>
-            </table>
+            <table id="lr_stab_heloc" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'lr_stab_heloc')">
+                        <span class="custom-tooltip">
+                             RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'lr_stab_heloc')">
+                        <span class="custom-tooltip">
+                             ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_stab_heloc')">
+                        <span class="custom-tooltip">
+                             RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">1.036</td>
+                    <td class="aatd">8.964</td>
+                    <td class="aatd">8.964</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">1.403</td>
+                    <td class="aatd">5.776</td>
+                    <td class="aatd">5.776</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="aatd">1.458</td>
+                    <td class="aatd">9.331</td>
+                    <td class="aatd">9.331</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">2.124</td>
+                    <td class="aatd">6.336</td>
+                    <td class="aatd">6.336</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">-3.724</td>
+                    <td class="aatd">3.507</td>
+                    <td class="aatd">3.507</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">4.534</td>
+                    <td class="aatd">8.833</td>
+                    <td class="aatd">8.833</td>
+                </tr>
+                </tbody>
+                </table>
 
             <h4> Fairness </h4>
-            <p>Fairness evaluation is not applicable for the HELOC dataset as it does not include any protected attributes.</p>
+            <p>Fairness evaluation is not applicable for the HELOC dataset as it does not include   any protected attributes.</p>
             </tbody>
             </table>
         </div>
@@ -1107,108 +1321,218 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
         <div class="collapsible-content">
             <h4> Faithfulness </h4>
                 <table id="nn_faith_adult" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-                <thead>
-                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_adult')">
-                        <span class="custom-tooltip">
-                         PGI <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
-                    </span>
-                    </th>
-                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_adult')">
-                        <span class="custom-tooltip">
-                         PGU <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
-                    </span>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.67</td>                    
-                    <td class="aatd">0.26</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.53</td>                    
-                    <td class="aatd">0.33</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.29</td>                    
-                    <td class="aatd">0.64</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.70</td>                    
-                    <td class="aatd">0.12</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.29</td>                    
-                    <td class="aatd">0.64</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.58</td>                    
-                    <td class="aatd">0.26</td>
-                </tr>
-            </tbody>
+                    <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_adult')">
+                            <span class="custom-tooltip">
+                             PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                        </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_adult')">
+                            <span class="custom-tooltip">
+                             PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.67</td>                    
+                        <td class="aatd">0.26</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.53</td>                    
+                        <td class="aatd">0.33</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.29</td>                    
+                        <td class="aatd">0.64</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.70</td>                    
+                        <td class="aatd">0.12</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.29</td>                    
+                        <td class="aatd">0.64</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.58</td>                    
+                        <td class="aatd">0.26</td>
+                    </tr>
+                </tbody>
             </table>
 
             <h4> Stability </h4>
                 <table id="nn_stab_adult" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                    <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_adult')">
+                            <span class="custom-tooltip">
+                             RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_adult')">
+                            <span class="custom-tooltip">
+                             ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_adult')">
+                            <span class="custom-tooltip">
+                             RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">-1.70</td>
+                        <td class="aatd">-0.95</td>
+                        <td class="aatd">6.22</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">1.79</td>
+                        <td class="aatd">2.45</td>
+                        <td class="aatd">9.77</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">1.98</td>
+                        <td class="aatd">2.68</td>
+                        <td class="aatd">9.78</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">3.25</td>
+                        <td class="aatd">3.08</td>
+                        <td class="aatd">8.25</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">4.32</td>
+                        <td class="aatd">4.33</td>
+                        <td class="aatd">11.74</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">5.01</td>
+                        <td class="aatd">4.58</td>
+                        <td class="aatd">9.86</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4> Fairness</h4>
+            <table id="nn_fair_adult" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
                 <thead>
                 <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
                     <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
-                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_stab_adult')">
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'nn_fair_adult')">
                         <span class="custom-tooltip">
-                         RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            Fairness@PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in PGI scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
-                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_adult')">
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(2, 'nn_fair_adult')">
                         <span class="custom-tooltip">
-                         ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            Fairness@PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
                         AA eval.
                         potentially
                         unreliable
-                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_adult')">
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_fair_adult')">
                         <span class="custom-tooltip">
-                         RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
+                            Fairness@RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in RIS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(4, 'nn_fair_adult')">
+                        <span class="custom-tooltip">
+                            Fairness@ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in ROS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(5, 'nn_fair_adult')">
+                        <span class="custom-tooltip">
+                            Fairness@RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in RRS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
                     </th>
                 </tr>
                 </thead>
@@ -1218,113 +1542,64 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                         <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
                         <br>
                     </td>
-                    <td class="aatd">-1.70</td>
-                    <td class="aatd">-0.95</td>
-                    <td class="aatd">6.22</td>
+                    <td class="aatd">0.006</td>
+                    <td class="aatd">0.040</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.024</td>
+                    <td class="aatd">0.006</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.034</td>
+                    <td class="aatd">0.016</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
                 </tr>
                 <tr class="even">
                     <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                        <br>
-                    </td>
-                    <td class="aatd">1.79</td>
-                    <td class="aatd">2.45</td>
-                    <td class="aatd">9.77</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    <td class="aatd">1.98</td>
-                    <td class="aatd">2.68</td>
-                    <td class="aatd">9.78</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">3.25</td>
-                    <td class="aatd">3.08</td>
-                    <td class="aatd">8.25</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
                         <br>
                     </td>
-                    <td class="aatd">4.32</td>
-                    <td class="aatd">4.33</td>
-                    <td class="aatd">11.74</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">5.01</td>
-                    <td class="aatd">4.58</td>
-                    <td class="aatd">9.86</td>
+                    <td class="aatd">0.036</td>
+                    <td class="aatd">0.018</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
                 </tr>
-            </tbody>
-            </table>
-
-            <h4> Fairness </h4>
-                <table id="nn_fair_adult" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-                <thead>
-                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_fair_adult')">
-                        <span class="custom-tooltip">
-                         Fairness@PGU <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
-                    </span>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
                 <tr class="odd">
                     <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
                         <br>
                     </td>
-                    <td class="aatd">0.001</td>
-                    
+                    <td class="aatd">0.037</td>
+                    <td class="aatd">0.013</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
                 </tr><tr class="even">
                     <td class="methoddt">
                         <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
                         <br>
                     </td>
-                    <td class="aatd">0.003</td>
-                   
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.001</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.001</td>
-                   
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.001</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.002</td>
-                    
+                    <td class="aatd">0.058</td>
+                    <td class="aatd">0.017</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
                 </tr>
             </tbody>
             </table>
@@ -1582,74 +1857,224 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
             </tbody>
             </table>
 
-            <h4> Fairness </h4>
-              <table id="lr_fair_adult" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-                <thead>
-                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                    : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(7, 'lr_fair_adult')">
-                        <span class="custom-tooltip">
-                         Fairness@PGU <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
-                    </span>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.053</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    
-                    <td class="aatd">0.030</td>
-                   
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    
-                    <td class="aatd">0.057</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    
-                    <td class="aatd">0.089</td>
-                    
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                        <br>
-                    </td>
-                    
-                    <td class="aatd">0.056</td>
-                    
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    
-                    <td class="aatd">0.013</td>
-                   
-                </tr>
-            </tbody>
-            </table>
+            <h4> Fairness</h4>
+            <table id="lr_fair_adult" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                    <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@FA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in FA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(2, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@RA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@SA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in SA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(4, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@SRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in SRA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(5, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@RC <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RC scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(6, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@PRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PRA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(7, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PGI scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(8, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(9, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RIS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(10, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in ROS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'lr_fair_adult')">
+                            <span class="custom-tooltip">
+                                Fairness@RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RRS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>                    
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.000</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.000</td>
+                        <td class="aatd">0.000</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.004</td>                    
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.003</td>
+                        <td class="aatd">0.004</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.007</td>
+                        <td class="aatd">0.005</td>
+                        <td class="aatd">0.004</td>
+                        <td class="aatd">0.005</td>
+                        <td class="aatd">0.009</td>                    
+                        <td class="aatd">0.004</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.004</td>
+                        <td class="aatd">0.003</td>
+                        <td class="aatd">0.009</td>
+                        <td class="aatd">0.006</td>
+                        <td class="aatd">0.005</td>
+                        <td class="aatd">0.006</td>
+                        <td class="aatd">0.009</td>                        
+                        <td class="aatd">0.006</td>                    
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.005</td>
+                        <td class="aatd">0.003</td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.003</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.003</td>                    
+                        <td class="aatd">0.006</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                </tbody>
+                </table>
         </div>
     </div>
 
@@ -1659,165 +2084,165 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
         <div class="collapsible-content">
             <h4> Faithfulness</h4>
             <table id="nn_faith_synth" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem; "role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-            <thead>
-                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_synth')">
-                    <span class="custom-tooltip">
-                         PGI <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
-                    </span>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_synth')">
+                <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(1, 'nn_faith_synth')">
                         <span class="custom-tooltip">
-                         PGU <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
-                    </span>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.25</td>                    
-                    <td class="aatd">0.35</td>
-                </tr><tr class="even">
-                    <!-- <td class="ranktd sorting_1">2</td> -->
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.32</td>                    
-                    <td class="aatd">0.27</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.31</td>                    
-                    <td class="aatd">0.29</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.41</td>                    
-                    <td class="aatd">0.13</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.31</td>                    
-                    <td class="aatd">0.29</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">0.31</td>                    
-                    <td class="aatd">0.29</td>
-                </tr>
-            </tbody>
+                             PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGI measures the difference in prediction probability that results from perturbing the features deemed as influential by a given post hoc explanation. Higher values are better.</span>
+                        </span>
+                        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_faith_synth')">
+                            <span class="custom-tooltip">
+                             PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">PGU measures the difference in prediction probability that results from perturbing the features deemed as unimportant by a given post hoc explanation. Lower values are better.</span>
+                        </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.25</td>                    
+                        <td class="aatd">0.35</td>
+                    </tr><tr class="even">
+                        <!-- <td class="ranktd sorting_1">2</td> -->
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.32</td>                    
+                        <td class="aatd">0.27</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.31</td>                    
+                        <td class="aatd">0.29</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.41</td>                    
+                        <td class="aatd">0.13</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.31</td>                    
+                        <td class="aatd">0.29</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.31</td>                    
+                        <td class="aatd">0.29</td>
+                    </tr>
+                </tbody>
             </table>
 
             <h4> Stability</h4>
             <table id="nn_stab_synth" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem; "role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
-            <thead>
-                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                        : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_synth')">
-                        <span class="custom-tooltip">
-                         RIS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                        : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_synth')">
-                        <span class="custom-tooltip">
-                         ROS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                    </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
-                        AA eval.
-                        potentially
-                        unreliable
-                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_synth')">
-                        <span class="custom-tooltip">
-                         RRS <i class=" fa fa-solid"></i>
-                        <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
-                    </span>
-                    </th>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
-                        <br>
-                    </td>
-                    <td class="aatd">1.11</td>
-                    <td class="aatd">-1.07</td>
-                    <td class="aatd">5.31</td>
-                </tr>
-                <tr class="even">
-                    <td class="methoddt">
-                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
-                        <br>
-                    </td>
-                    <td class="aatd">5.53</td>
-                    <td class="aatd">3.40</td>
-                    <td class="aatd">9.86</td>
-                </tr><tr class="odd">
-                    <!-- <td class="ranktd sorting_1">2</td> -->
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
-                        <br>
-                    </td>
-                    <td class="aatd">5.96</td>
-                    <td class="aatd">3.95</td>
-                    <td class="aatd">10.39</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
-                        <br>
-                    </td>
-                    <td class="aatd">6.80</td>
-                    <td class="aatd">3.46</td>
-                    <td class="aatd">7.22</td>
-                </tr><tr class="odd">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">7.58</td>
-                    <td class="aatd">4.24</td>
-                    <td class="aatd">8.02</td>
-                </tr><tr class="even">
-                    <td class="methoddt">
-                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
-                        <br>
-                    </td>
-                    <td class="aatd">8.14</td>
-                    <td class="aatd">5.53</td>
-                    <td class="aatd">11.60</td>
-                </tr>
-            </tbody>
+                <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                            : activate to sort column ascending" style="width: 51px;cursor:pointer" onclick="sortTable(1, 'nn_stab_synth')">
+                            <span class="custom-tooltip">
+                             RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RIS measures the maximum change in explanation relative to changes in the inputs. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                            : activate to sort column ascending" style="width: 51px; cursor:pointer" onclick="sortTable(2, 'nn_stab_synth')">
+                            <span class="custom-tooltip">
+                             ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">ROS measures the maximum change in explanation relative to changes in the output prediction probabilities. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                        </th><th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                            : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_stab_synth')">
+                            <span class="custom-tooltip">
+                             RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext">RRS measures the maximum change in explanation relative to changes in the internal representations learned by the model. Values closer to zero are better (log 1 ~ 0).</span>
+                        </span>
+                        </th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">1.11</td>
+                        <td class="aatd">-1.07</td>
+                        <td class="aatd">5.31</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">5.53</td>
+                        <td class="aatd">3.40</td>
+                        <td class="aatd">9.86</td>
+                    </tr><tr class="odd">
+                        <!-- <td class="ranktd sorting_1">2</td> -->
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">5.96</td>
+                        <td class="aatd">3.95</td>
+                        <td class="aatd">10.39</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">6.80</td>
+                        <td class="aatd">3.46</td>
+                        <td class="aatd">7.22</td>
+                    </tr><tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">7.58</td>
+                        <td class="aatd">4.24</td>
+                        <td class="aatd">8.02</td>
+                    </tr><tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">8.14</td>
+                        <td class="aatd">5.53</td>
+                        <td class="aatd">11.60</td>
+                    </tr>
+                </tbody>
             </table>
 
             <h4> Fairness </h4>
@@ -2262,6 +2687,128 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 </tbody>
             </table>
 
+            <h4> Fairness</h4>
+            <table id="nn_fair_compas" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                <thead>
+                <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'nn_fair_compas')">
+                        <span class="custom-tooltip">
+                            Fairness@PGI <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in PGI scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(2, 'nn_fair_compas')">
+                        <span class="custom-tooltip">
+                            Fairness@PGU <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'nn_fair_compas')">
+                        <span class="custom-tooltip">
+                            Fairness@RIS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in RIS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(4, 'nn_fair_compas')">
+                        <span class="custom-tooltip">
+                            Fairness@ROS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in ROS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                    <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                        AA eval.
+                        potentially
+                        unreliable
+                    : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(5, 'nn_fair_compas')">
+                        <span class="custom-tooltip">
+                            Fairness@RRS <i class=" fa fa-solid"></i>
+                            <span class="tooltiptext align-right">Computes the absolute difference in RRS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                        </span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.052</td>
+                    <td class="aatd">0.082</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.054</td>
+                    <td class="aatd">0.083</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
+                <tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.066</td>
+                    <td class="aatd">0.084</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
+                <tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.076</td>
+                    <td class="aatd">0.086</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr><tr class="odd">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.087</td>
+                    <td class="aatd">0.085</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr><tr class="even">
+                    <td class="methoddt">
+                        <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                        <br>
+                    </td>
+                    <td class="aatd">0.119</td>
+                    <td class="aatd">0.096</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                    <td class="aatd">-</td>
+                </tr>
+            </tbody>
+            </table>
         </div>
 
         <button class="collapsible sub-collapse"> Logistic Regression Model</button>
@@ -2514,7 +3061,228 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 </tbody>
             </table>
 
-            
+            <h4> Fairness</h4>
+            <table id="lr_fair_compas" class="datatable dataTable no-footer" style="width: 100%; margin-top: 1rem; margin-bottom:3rem;"role="grid" aria-describedby="cifar10_leaderboard_Linf_info">
+                    <thead>
+                    <tr role="row"><th class="method sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="Method: activate to sort column ascending" style="width: 58px;">Method</th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(1, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@FA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in FA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(2, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@RA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(3, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@SA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in SA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(4, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@SRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in SRA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(5, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@RC <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RC scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(6, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@PRA <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PRA scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(7, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@PGI <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PGI scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(8, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@PGU <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in PGU scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(9, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@RIS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RIS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(10, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@ROS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in ROS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                        <th class="aa-ext sorting" tabindex="0" aria-controls="cifar10_leaderboard_Linf" rowspan="1" colspan="1" aria-label="
+                            AA eval.
+                            potentially
+                            unreliable
+                        : activate to sort column ascending" style="width: 57px; cursor:pointer" onclick="sortTable(11, 'lr_fair_compas')">
+                            <span class="custom-tooltip">
+                                Fairness@RRS <i class=" fa fa-solid"></i>
+                                <span class="tooltiptext align-right">Computes the absolute difference in RRS scores between the majority and the minority subgroups. Lower disparities are better.</span>
+                            </span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1706.03825.pdf" target="_blank">SmoothGrad</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.048</td>
+                        <td class="aatd">0.036</td>
+                        <td class="aatd">0.024</td>
+                        <td class="aatd">0.029</td>
+                        <td class="aatd">0.019</td>
+                        <td class="aatd">0.023</td>
+                        <td class="aatd">0.088</td>
+                        <td class="aatd">0.073</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="even">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1312.6034.pdf" target="_blank">Vanilla Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.046</td>
+                        <td class="aatd">0.034</td>
+                        <td class="aatd">0.011</td>
+                        <td class="aatd">0.006</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.002</td>
+                        <td class="aatd">0.069</td>                    
+                        <td class="aatd">0.069</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1703.01365.pdf" target="_blank">Integrated Gradient</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.046</td>
+                        <td class="aatd">0.034</td>
+                        <td class="aatd">0.011</td>
+                        <td class="aatd">0.006</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.001</td>
+                        <td class="aatd">0.067</td>                    
+                        <td class="aatd">0.069</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank">LIME</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.045</td>
+                        <td class="aatd">0.048</td>
+                        <td class="aatd">0.043</td>
+                        <td class="aatd">0.052</td>
+                        <td class="aatd">0.037</td>
+                        <td class="aatd">0.037</td>
+                        <td class="aatd">0.063</td>                    
+                        <td class="aatd">0.067</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1705.07874.pdf" target="_blank">SHAP</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.029</td>
+                        <td class="aatd">0.016</td>
+                        <td class="aatd">0.060</td>
+                        <td class="aatd">0.045</td>
+                        <td class="aatd">0.032</td>
+                        <td class="aatd">0.026</td>
+                        <td class="aatd">0.070</td>                    
+                        <td class="aatd">0.072</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="methoddt">
+                            <a href="https://arxiv.org/pdf/1605.01713.pdf" target="_blank">Gradient x Input</a>
+                            <br>
+                        </td>
+                        <td class="aatd">0.026</td>
+                        <td class="aatd">0.019</td>
+                        <td class="aatd">0.063</td>
+                        <td class="aatd">0.048</td>
+                        <td class="aatd">0.035</td>
+                        <td class="aatd">0.029</td>
+                        <td class="aatd">0.071</td>                    
+                        <td class="aatd">0.069</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                        <td class="aatd">-</td>
+                    </tr>
+                    </tr>
+                </tbody>
+                </table>
         </div>
     </div>
 
@@ -2684,7 +3452,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 </tbody>
             </table>
 
-            
+            <h4> Fairness</h4>
+            <p>Fairness evaluation is not applicable for the SynthGauss dataset as it does not include any protected attributes.</p>
         </div>
 
         <button class="collapsible sub-collapse"> Logistic Regression Model</button>
@@ -2936,6 +3705,8 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
                 </tbody>
             </table>
 
+            <h4> Fairness</h4>
+            <p>Fairness evaluation is not applicable for the SynthGauss dataset as it does not include any protected attributes.</p>
     </div>
 
 
@@ -2943,7 +3714,7 @@ We invite submissions to any one or multiple benchmarks in OpenXAI. To be includ
 
     function defaultSort() {
 
-        var tables = ["neuralMyTable2", "nn_faith_gmsc", "lr_faith_compas", "nn_faith_compas", "lr_faith_synth", "nn_faith_synth", "lr_fair_adult", "lr_faith_adult", "nn_fair_adult","nn_faith_adult", "lr_faith_heloc", "nn_faith_heloc", "lr_fair_german", "lr_faith_german", "nn_fair_german", "lr_faith_gmsc"];
+        var tables = ["neuralMyTable2", "nn_fair_german", "nn_faith_gmsc", "lr_faith_compas", "nn_faith_compas", "lr_faith_synth", "nn_faith_synth", "lr_fair_adult", "lr_faith_adult", "nn_fair_adult","nn_faith_adult", "lr_faith_heloc", "nn_faith_heloc", "lr_fair_german", "lr_faith_german", "lr_faith_gmsc"];
 
         tables.forEach(tableId => {
             var table = document.getElementById(tableId);
@@ -3011,22 +3782,24 @@ function sortTable(n, tableId, direction) {
       /*check if the two rows should switch place,
       based on the direction, asc or desc:*/
       if (dir == "asc") {
+        icon[0].classList.add("fa-arrow-down");
+          icon[0].classList.remove("fa-arrow-up");
         if (parseFloat(x.innerHTML.toLowerCase()) > parseFloat(y.innerHTML.toLowerCase())) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
-          icon[0].classList.add("fa-arrow-down");
-          icon[0].classList.remove("fa-arrow-up");
+          
           break;
 
 
           // col.classList.remove("fa");
         }
       } else if (dir == "desc") {
+        icon[0].classList.add("fa-arrow-up");
+          icon[0].classList.remove("fa-arrow-down");
         if (parseFloat(x.innerHTML.toLowerCase()) < parseFloat(y.innerHTML.toLowerCase())) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
-          icon[0].classList.add("fa-arrow-up");
-          icon[0].classList.remove("fa-arrow-down");
+          
           break;
         }
       }
@@ -3041,7 +3814,7 @@ function sortTable(n, tableId, direction) {
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
-      if (switchcount == 0 && dir == "asc") {
+      if (switchcount == 0 && dir == "asc" && !direction) {
         dir = "desc";
         switching = true;
       }

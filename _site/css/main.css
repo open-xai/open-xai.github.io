@@ -2432,7 +2432,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover { background-color: #ecec
 
 .custom-tooltip .tooltiptext { visibility: hidden; width: 200px; background-color: rgba(0, 0, 0, 0.6); color: #fff; text-align: center; border-radius: 6px; padding: 5px 5px; position: absolute; z-index: 1; top: 10%; right: 175%; margin-left: -60px; /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */ opacity: 0; transition: opacity 1s; }
 
-.custom-tooltip .align-right { right: 110%; }
+.custom-tooltip .align-right { right: 50%; }
 
 .custom-tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
 
